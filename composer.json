@@ -11,7 +11,10 @@
   "require": {
     "php": ">=7.1",
     "phore/micro-app": "*",
-    "phore/vcs": "dev-master"
+    "phore/vcs": "dev-master",
+    "text/template": "dev-master",
+    "phore/html": "dev-master",
+    "erusev/parsedown-extra": "dev-master"
   },
   "autoload": {
     "psr-4": {

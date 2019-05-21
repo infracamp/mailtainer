@@ -17,5 +17,6 @@ define("CONFIG_REPO", "%CONFIG_REPO%");
 define("CONFIG_REPO_PREFIX", "demo_repo");
 
 
-define("REPO_PATH", "/mnt/repo")
-define("SSH_KEY_PATH", "/mnt/.ssh/id_ed25519")
+// Predefined
+define("REPO_PATH", "/mnt/repo");
+define("SSH_KEY_PATH", "/mnt/.ssh/id_ed25519");

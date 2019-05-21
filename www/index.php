@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use App\Cms\CmsCtrl;
 use Phore\MicroApp\App;
 use Phore\MicroApp\Handler\JsonExceptionHandler;
 use Phore\MicroApp\Handler\JsonResponseHandler;
@@ -25,20 +26,11 @@ $app->assets()->addAssetSearchPath(__DIR__ . "/assets/");
  **/
 $app->acl->addRule(\aclRule()->route("/*")->ALLOW());
 
+require __DIR__ . "/di-config.inc.php";
+require __DIR__ . "/admin.inc.php";
 
-/**
- ** Configure Dependency Injection
- **/
-$app->add("someParameterName", function () {
-    return "Value";
-});
 
-/**
- ** Define Routes
- **/
-$app->router->get("/", function (RouteParams $routeParams, Request $request) {
-    return ["Hello World!"];
-});
+$app->addCtrl(CmsCtrl::class);
 
 /**
  ** Run the application
