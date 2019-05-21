@@ -1,0 +1,25 @@
+{
+  "name": "some/project-name",
+  "description": "Project description",
+  "keywords": ["Keyword1", "Keyword2"],
+  "license": "Proprietary",
+  "authors": [
+    { "name": "Matthias Leuffen", "email": "m@tth.es" }
+  ],
+  "repositories": [
+  ],
+  "require": {
+    "php": ">=7.1",
+    "phore/micro-app": "*",
+    "phore/vcs": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    },
+    "files": [
+      "config.php"
+    ]
+  },
+  "minimum-stability": "dev"
+}

@@ -1,0 +1,4 @@
+- host: some.tld
+  aliases:
+    - www.some.tld
+  path: some.tld/
