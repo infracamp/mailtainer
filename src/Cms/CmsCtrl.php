@@ -34,9 +34,10 @@ class CmsCtrl
             $aliases = phore_pluck("aliases", $curHost, []);
             $path = phore_pluck("path", $curHost, new \InvalidArgumentException("httpcfg.yml: Host $host is missing path:-configuration."));
 
-            if (strcasecmp($request->httpHost, $host)) {
+            if ($request->httpHost == $host) {
                 $this->host = $host;
                 $this->path = phore_dir("/" . REPO_PATH . "/" . CONFIG_REPO_PREFIX)->withSubPath($path)->assertDirectory();
+                break;
             }
         }
 
@@ -67,8 +68,7 @@ class CmsCtrl
     public function renderInTemplate(string $template, array $scope)
     {
         $tpl = $this->path->withFileName($template)->assertFile()->get_contents();
-        echo $tpl;
-        $template = new TextTemplate($tpl );
+        $template = new TextTemplate($tpl);
         return $template->apply($scope, false);
     }
 

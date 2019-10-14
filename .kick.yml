@@ -10,9 +10,13 @@ config_file:
 command:
   build:
     - "composer update"
+    - "sudo scripts/install-mail.sh"
 
   dev:
     - "sudo scripts/startup.sh"
 
   run:
     - "sudo scripts/startup.sh"
+
+  config:
+    - "sudo -E cloudtool.php /opt/etc /etc"
