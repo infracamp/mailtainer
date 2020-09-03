@@ -4,116 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbfdbb97f4d5e39952fd3a2d475647f1",
+    "content-hash": "affba0a3d0a8af4b74704b1dcff50d75",
     "packages": [
-        {
-            "name": "erusev/parsedown",
-            "version": "1.8.0-beta-7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/erusev/parsedown.git",
-                "reference": "fe7a50eceb4a3c867cc9fa9c0aa906b1067d1955"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/fe7a50eceb4a3c867cc9fa9c0aa906b1067d1955",
-                "reference": "fe7a50eceb4a3c867cc9fa9c0aa906b1067d1955",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.35"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Parsedown": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Emanuil Rusev",
-                    "email": "hello@erusev.com",
-                    "homepage": "http://erusev.com"
-                }
-            ],
-            "description": "Parser for Markdown.",
-            "homepage": "http://parsedown.org",
-            "keywords": [
-                "markdown",
-                "parser"
-            ],
-            "time": "2019-03-17T18:47:21+00:00"
-        },
-        {
-            "name": "erusev/parsedown-extra",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/erusev/parsedown-extra.git",
-                "reference": "f21b40a1973b6674903a6da9857ee215e8839f96"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown-extra/zipball/f21b40a1973b6674903a6da9857ee215e8839f96",
-                "reference": "f21b40a1973b6674903a6da9857ee215e8839f96",
-                "shasum": ""
-            },
-            "require": {
-                "erusev/parsedown": "^1.8.0|^1.8.0-beta-4",
-                "ext-dom": "*",
-                "ext-mbstring": "*",
-                "php": ">=5.3.6"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.35"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "ParsedownExtra": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Emanuil Rusev",
-                    "email": "hello@erusev.com",
-                    "homepage": "http://erusev.com"
-                }
-            ],
-            "description": "An extension of Parsedown that adds support for Markdown Extra.",
-            "homepage": "https://github.com/erusev/parsedown-extra",
-            "keywords": [
-                "markdown",
-                "markdown extra",
-                "parsedown",
-                "parser"
-            ],
-            "time": "2018-05-08T22:06:04+00:00"
-        },
         {
             "name": "phore/cloudtool",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-cloudtool.git",
-                "reference": "8157bd2422de12456c21a0f9373ca5ce5a2e3f17"
+                "reference": "cf5954ed6e00c135eb4f3d4293cb3d146929f86f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-cloudtool/zipball/8157bd2422de12456c21a0f9373ca5ce5a2e3f17",
-                "reference": "8157bd2422de12456c21a0f9373ca5ce5a2e3f17",
+                "url": "https://api.github.com/repos/phore/phore-cloudtool/zipball/cf5954ed6e00c135eb4f3d4293cb3d146929f86f",
+                "reference": "cf5954ed6e00c135eb4f3d4293cb3d146929f86f",
                 "shasum": ""
             },
             "require": {
@@ -144,13 +48,13 @@
                 }
             ],
             "description": "Script to update config files using template",
-            "homepage": "http://infracamp.org/phore",
+            "homepage": "http://infracamp.org/project/phore",
             "keywords": [
                 "config",
                 "template",
                 "text"
             ],
-            "time": "2019-10-02T18:29:13+00:00"
+            "time": "2020-09-03T17:20:51+00:00"
         },
         {
             "name": "phore/core",
@@ -158,12 +62,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-core.git",
-                "reference": "d24a50595f52f6f2488c829bd621ba30da86699c"
+                "reference": "c77383525a84da51ea32d9a7696db8b6e6e8c157"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-core/zipball/d24a50595f52f6f2488c829bd621ba30da86699c",
-                "reference": "d24a50595f52f6f2488c829bd621ba30da86699c",
+                "url": "https://api.github.com/repos/phore/phore-core/zipball/c77383525a84da51ea32d9a7696db8b6e6e8c157",
+                "reference": "c77383525a84da51ea32d9a7696db8b6e6e8c157",
                 "shasum": ""
             },
             "require": {
@@ -200,59 +104,8 @@
                 }
             ],
             "description": "Phore core library",
-            "homepage": "https://infracamp.org/phore/",
-            "time": "2019-10-02T21:54:25+00:00"
-        },
-        {
-            "name": "phore/di-base",
-            "version": "v2.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phore/phore-di-base.git",
-                "reference": "fef0410bef4d3db8a4c586e85f3c6d6bec830a1b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-di-base/zipball/fef0410bef4d3db8a4c586e85f3c6d6bec830a1b",
-                "reference": "fef0410bef4d3db8a4c586e85f3c6d6bec830a1b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0",
-                "psr/container": "^1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Phore\\Di\\": "src/Di"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matthias Leuffen",
-                    "email": "matthes@leuffen.de"
-                }
-            ],
-            "description": "Dependency Injection Base Classes and Interfaces",
-            "homepage": "https://getgismo.com",
-            "keywords": [
-                "Phore",
-                "dependency injection",
-                "di"
-            ],
-            "time": "2018-07-10T05:48:13+00:00"
+            "homepage": "https://infracamp.org/project/phore",
+            "time": "2020-09-02T13:22:32+00:00"
         },
         {
             "name": "phore/filesystem",
@@ -260,18 +113,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-filesystem.git",
-                "reference": "b5c031eb357d553fb3460e59de5bef6a33188558"
+                "reference": "fbf9ac46d203a3be221fd1f776b7c92d109c906e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-filesystem/zipball/b5c031eb357d553fb3460e59de5bef6a33188558",
-                "reference": "b5c031eb357d553fb3460e59de5bef6a33188558",
+                "url": "https://api.github.com/repos/phore/phore-filesystem/zipball/fbf9ac46d203a3be221fd1f776b7c92d109c906e",
+                "reference": "fbf9ac46d203a3be221fd1f776b7c92d109c906e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-yaml": "*",
-                "phore/core": "dev-master",
+                "phore/core": "*",
                 "php": ">7.1",
                 "psr/http-message": "^1.0@dev"
             },
@@ -298,41 +151,37 @@
                 }
             ],
             "description": "Acces files layer",
-            "time": "2019-09-26T10:09:57+00:00"
+            "homepage": "http://infracamp.org/project/phore",
+            "time": "2020-06-03T19:34:50+00:00"
         },
         {
-            "name": "phore/html",
+            "name": "phore/hydrator",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phore/phore-html.git",
-                "reference": "30d75eb49daa904733d1025693c81a2a780bae05"
+                "url": "https://github.com/phore/phore-hydrator.git",
+                "reference": "96157b2aec19e66baae598ec24cba329884ea52b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-html/zipball/30d75eb49daa904733d1025693c81a2a780bae05",
-                "reference": "30d75eb49daa904733d1025693c81a2a780bae05",
+                "url": "https://api.github.com/repos/phore/phore-hydrator/zipball/96157b2aec19e66baae598ec24cba329884ea52b",
+                "reference": "96157b2aec19e66baae598ec24cba329884ea52b",
                 "shasum": ""
             },
             "require": {
-                "ext-pcre": "*",
-                "php": ">7.0"
+                "phore/core": "*",
+                "php": ">=7.2"
             },
             "require-dev": {
-                "erusev/parsedown-extra": "^0.7",
-                "phpunit/phpunit": "*",
-                "psr/http-message": "^1.0"
-            },
-            "suggest": {
-                "erusev/parsedown-extra": "required to use markdown() methods"
+                "phpunit/phpunit": "*"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Phore\\Html\\": "src/"
+                    "Phore\\Hydrator\\": "src/"
                 },
                 "files": [
-                    "src/functions.inc.php"
+                    "src/functions.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -345,9 +194,8 @@
                     "email": "m@tth.es"
                 }
             ],
-            "description": "Fluent HTML Template api",
-            "homepage": "https://infracamp.org/phore/",
-            "time": "2019-09-30T16:59:36+00:00"
+            "description": "Unserialize arrays into object structure",
+            "time": "2020-09-03T15:59:19+00:00"
         },
         {
             "name": "phore/log",
@@ -355,21 +203,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-log.git",
-                "reference": "c6d62b5df28afc64bae41a37d3c2dda5d403fd8b"
+                "reference": "553dddb3403679f1e080b7078164bedb5280a547"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-log/zipball/c6d62b5df28afc64bae41a37d3c2dda5d403fd8b",
-                "reference": "c6d62b5df28afc64bae41a37d3c2dda5d403fd8b",
+                "url": "https://api.github.com/repos/phore/phore-log/zipball/553dddb3403679f1e080b7078164bedb5280a547",
+                "reference": "553dddb3403679f1e080b7078164bedb5280a547",
                 "shasum": ""
             },
             "require": {
-                "phore/core": "dev-master",
+                "phore/core": "*",
                 "php": ">=7.1",
                 "psr/log": "^1.1"
             },
             "require-dev": {
-                "nette/tester": "^2.1@dev"
+                "phpunit/phpunit": "*"
             },
             "type": "library",
             "autoload": {
@@ -391,109 +239,12 @@
                 }
             ],
             "description": "Logging class",
+            "homepage": "https://infracamp.org/project/phore",
             "keywords": [
                 "Keyword1",
                 "Keyword2"
             ],
-            "time": "2019-09-25T17:27:32+00:00"
-        },
-        {
-            "name": "phore/micro-app",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phore/phore-micro-app.git",
-                "reference": "5be369b5205fbce004ea5a54476f007637f9a8db"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-micro-app/zipball/5be369b5205fbce004ea5a54476f007637f9a8db",
-                "reference": "5be369b5205fbce004ea5a54476f007637f9a8db",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ext-yaml": "*",
-                "phore/core": "dev-master",
-                "phore/di-base": "2.1.1",
-                "php": ">7.1"
-            },
-            "require-dev": {
-                "phore/http-client": "*",
-                "phore/theme-coreui": "dev-master",
-                "phpunit/phpunit": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Phore\\MicroApp\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matthias Leuffen",
-                    "email": "m@tth.es"
-                }
-            ],
-            "description": "Micro framework for rest api webservices",
-            "homepage": "https://infracamp.org/phore/",
-            "time": "2019-10-02T09:46:56+00:00"
-        },
-        {
-            "name": "phore/objectstore",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phore/phore-objectstore.git",
-                "reference": "047e5d2f5778d53d9063c6a13824f10d193e428f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-objectstore/zipball/047e5d2f5778d53d9063c6a13824f10d193e428f",
-                "reference": "047e5d2f5778d53d9063c6a13824f10d193e428f",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ext-yaml": "*",
-                "phore/core": "dev-master",
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "google/cloud-storage": "dev-master",
-                "nette/tester": "^2.1@dev",
-                "phore/filesystem": "dev-master"
-            },
-            "suggest": {
-                "google/cloud-storage": "If using Google Cloud services",
-                "phore/filesystem": "If using filesystem driver"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Phore\\ObjectStore\\": "src/"
-                },
-                "files": []
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matthias Leuffen",
-                    "email": "m@tth.es"
-                }
-            ],
-            "description": "Object store for local files, google, aws",
-            "time": "2019-05-08T14:41:10+00:00"
+            "time": "2019-12-06T00:12:51+00:00"
         },
         {
             "name": "phore/system",
@@ -501,12 +252,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-system.git",
-                "reference": "3fc5794acc87945893c07ed6e54b3168257330be"
+                "reference": "ecc5a518cd4514609e630938f4367a6d4a0b8269"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-system/zipball/3fc5794acc87945893c07ed6e54b3168257330be",
-                "reference": "3fc5794acc87945893c07ed6e54b3168257330be",
+                "url": "https://api.github.com/repos/phore/phore-system/zipball/ecc5a518cd4514609e630938f4367a6d4a0b8269",
+                "reference": "ecc5a518cd4514609e630938f4367a6d4a0b8269",
                 "shasum": ""
             },
             "require": {
@@ -536,101 +287,8 @@
                 }
             ],
             "description": "Execute shell commands",
-            "time": "2019-09-12T16:19:37+00:00"
-        },
-        {
-            "name": "phore/vcs",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phore/phore-vcs.git",
-                "reference": "40bb91c974527ee1ffb0123aaf5fa7b96d01dd0b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-vcs/zipball/40bb91c974527ee1ffb0123aaf5fa7b96d01dd0b",
-                "reference": "40bb91c974527ee1ffb0123aaf5fa7b96d01dd0b",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ext-yaml": "*",
-                "phore/filesystem": "dev-master",
-                "phore/objectstore": "dev-master",
-                "phore/system": "dev-master",
-                "php": ">7.1"
-            },
-            "require-dev": {
-                "phore/theme-coreui": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Phore\\VCS\\": "src/"
-                },
-                "files": []
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matthias Leuffen",
-                    "email": "leuffen@continue.de"
-                }
-            ],
-            "description": "Wrapper for git",
-            "time": "2019-07-09T11:14:34+00:00"
-        },
-        {
-            "name": "psr/container",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/container.git",
-                "reference": "fc1bc363ecf887921e3897c7b1dad3587ae154eb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/fc1bc363ecf887921e3897c7b1dad3587ae154eb",
-                "reference": "fc1bc363ecf887921e3897c7b1dad3587ae154eb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Container\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common Container Interface (PHP FIG PSR-11)",
-            "homepage": "https://github.com/php-fig/container",
-            "keywords": [
-                "PSR-11",
-                "container",
-                "container-interface",
-                "container-interop",
-                "psr"
-            ],
-            "time": "2019-10-04T14:07:35+00:00"
+            "homepage": "https://infracamp.org/project/phore",
+            "time": "2020-05-15T17:16:34+00:00"
         },
         {
             "name": "psr/http-message",
@@ -688,12 +346,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "c4421fcac1edd5a324fda73e589a5cf96e52ffd0"
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/c4421fcac1edd5a324fda73e589a5cf96e52ffd0",
-                "reference": "c4421fcac1edd5a324fda73e589a5cf96e52ffd0",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
                 "shasum": ""
             },
             "require": {
@@ -727,7 +385,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2018-11-21T13:42:00+00:00"
+            "time": "2020-03-23T09:12:05+00:00"
         },
         {
             "name": "text/template",
@@ -735,12 +393,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dermatthes/text-template.git",
-                "reference": "0c2313923ea70798780a7509f7817bf350f08abb"
+                "reference": "fd77c2aeb9c749426c7f6b5f7ab93c8de90a7cbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dermatthes/text-template/zipball/0c2313923ea70798780a7509f7817bf350f08abb",
-                "reference": "0c2313923ea70798780a7509f7817bf350f08abb",
+                "url": "https://api.github.com/repos/dermatthes/text-template/zipball/fd77c2aeb9c749426c7f6b5f7ab93c8de90a7cbc",
+                "reference": "fd77c2aeb9c749426c7f6b5f7ab93c8de90a7cbc",
                 "shasum": ""
             },
             "require": {
@@ -782,18 +440,15 @@
                 "text",
                 "twig"
             ],
-            "time": "2019-10-02T22:00:34+00:00"
+            "time": "2020-06-02T22:43:47+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "phore/vcs": 20,
-        "text/template": 20,
-        "phore/html": 20,
-        "erusev/parsedown-extra": 20,
-        "phore/cloudtool": 20
+        "phore/cloudtool": 20,
+        "phore/hydrator": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

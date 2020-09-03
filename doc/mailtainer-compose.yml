@@ -1,0 +1,41 @@
+version: "3.7"
+
+services:
+  mailtainer:
+    image: infracamp/mailtainer:1.0
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    environment:
+    - "MAILNAME=put.your.hostname.here"
+    - "ENABLE_LETSENCRYPT=0"
+    volumes:
+    - type: bind
+      source: /mailtainer_data
+      target: /data
+    ports:
+    - target: 80
+      published: 80
+      protocol: tcp
+      mode: host
+    - target: 25
+      published: 25
+      protocol: tcp
+      mode: host
+    - target: 2525
+      published: 2525
+      protocol: tcp
+      mode: host
+    - target: 465
+      published: 465
+      protocol: tcp
+      mode: host
+    - target: 993
+      published: 993
+      protocol: tcp
+      mode: host
+    - target: 143
+      published: 143
+      protocol: tcp
+      mode: host
+

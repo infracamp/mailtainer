@@ -1,21 +1,25 @@
 #!/bin/bash
 
+##
+# This script is run once the container starts up
+#
+
 set -x -e
 
-mkdir -p /mnt/.ssh
-mkdir -p /mnt/log
 
-rm -R /var/log
-ln -s /mnt/log /var/log
+echo $MAILNAME > /etc/mailname
 
-if [[ ! -f /mnt/.ssh/id_ed25519.pub ]]
-then
-    echo "Creating new ssh key pair"
-    ssh-keygen -N "" -t ed25519 -f /mnt/.ssh/id_ed25519
+mkdir -p /data/dovecot
+mkdir -p /data/postfix
+mkdir -p /data/letsencrypt
 
-fi
+chown -R vmail:vmail /data/dovecot
+chown -R root:root /data/letsencrypt
 
-chown -R www-data /mnt
+service syslog-ng start
+service cron start
+
+/opt/scripts/letsencrypt.sh
 
 
 

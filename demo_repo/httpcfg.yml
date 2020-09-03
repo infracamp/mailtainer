@@ -1,4 +1,0 @@
-- host: localhost
-  aliases:
-    - www.some.tld
-  path: some.tld/

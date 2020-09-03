@@ -1,6 +1,0 @@
-
-accounts:
-  - account: info@xyz.net
-    passwd-hash: {SHA512-CRYPT}xlwo2ihr4oirjlkajoghkvkjwro30ßsfklfkljalkajlsafo3hvflkajlj
-    alias:
-      - info2@xyz.net

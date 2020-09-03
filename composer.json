@@ -1,29 +1,20 @@
 {
-  "name": "some/project-name",
+  "name": "infracamp/mailtainer",
   "description": "Project description",
   "keywords": ["Keyword1", "Keyword2"],
   "license": "Proprietary",
   "authors": [
     { "name": "Matthias Leuffen", "email": "m@tth.es" }
   ],
-  "repositories": [
-  ],
   "require": {
     "php": ">=7.1",
-    "phore/micro-app": "*",
-    "phore/vcs": "dev-master",
-    "text/template": "dev-master",
-    "phore/html": "dev-master",
-    "erusev/parsedown-extra": "dev-master",
-    "phore/cloudtool": "dev-master"
+    "phore/cloudtool": "dev-master",
+    "phore/hydrator": "dev-master"
   },
   "autoload": {
     "psr-4": {
-      "App\\": "src/"
-    },
-    "files": [
-      "config.php"
-    ]
+      "Infracamp\\Mailtainer\\": "src/"
+    }
   },
   "minimum-stability": "dev"
 }

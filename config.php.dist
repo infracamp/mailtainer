@@ -13,10 +13,15 @@
 define("DEV_MODE", (bool)"%DEV_MODE%");
 define("VERSION_INFO", "v0.1.%VERSION_NUMBER% (%VERSION_DATE_COMPACT%)");
 
-define("CONFIG_REPO", "%CONFIG_REPO%");
-define("CONFIG_REPO_PREFIX", "demo_repo");
+/**
+ * The hostname the mailsystem is running on. Must be reachable
+ * on port 80 to use Letsencrypt
+ */
+define("MAILNAME", "%MAILNAME%");
 
+define("ENABLE_LETSENCRYPT", (bool)"%ENABLE_LETSENCRYPT?0%");
 
-// Predefined
-define("REPO_PATH", "/mnt/repo");
-define("SSH_KEY_PATH", "/mnt/.ssh/id_ed25519");
+define("RBL_CLIENT", "%RBL_CLIENT?sbl-xbl.spamhaus.org;dnsbl.sorbs.net%");
+
+define("CONFIG_FILE", "%CONFIG_FILE?/data/mailtainer-cfg.yml%");
+

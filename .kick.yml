@@ -1,7 +1,7 @@
 version: 1
 from: "infracamp/kickstart-flavor-gaia:testing"
 
-apache_fallback_resource: "/index.php"
+apache_fallback_resource: "/index.html"
 
 config_file:
   template: "config.php.dist"
@@ -19,4 +19,4 @@ command:
     - "sudo scripts/startup.sh"
 
   config:
-    - "sudo -E cloudtool.php /opt/etc /etc"
+    - "sudo -E vendor/bin/cloudtool --autoload /opt/src/bootstrap.php --tpldir /opt/etc --target /etc --onchange /opt/scripts/restart-services.sh --watch"
