@@ -5,8 +5,13 @@ services:
     image: infracamp/mailtainer:1.0
     hostname: put.your.hostname.here
     deploy:
+      replicas: 1
       placement:
         constraints: [node.role == manager]
+      restart_policy:
+        condition: on-failure
+        delay: 300s
+        max_attempts: 2
     environment:
     - "MAILNAME=put.your.hostname.here"
     - "ENABLE_LETSENCRYPT=0"
