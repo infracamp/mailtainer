@@ -1,15 +1,19 @@
-# Mailtainer Private Server
+# Mailtainer - All In One Mailserver (IMAP/SMTP)
 
 ## TL;DR
 
-- [Demo docker-stackfile.yml](doc/mailtainer-compose.yml)
-- [Demo account-config.yml](doc/mailtainer-cfg.yml)
+- Public available image - runs on docker or kubernetes
+    - [Demo docker-stackfile.yml](doc/mailtainer-compose.yml)
+- AllInOne Yaml Config File
+    - [Demo account-config.yml](doc/mailtainer-cfg.yml)
 - Preconfigured IMAP/POP3 Mailserver to be configured with
   one single yaml file.
 - Out of the box support for Letsencrypt (SSL)
 - Setup & ready to go in 60 seconds
 
 ## Deployment / Configuration
+
+
 
 ```bash
 sudo apt-get install docker.io curl
