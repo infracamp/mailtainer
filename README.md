@@ -3,6 +3,7 @@
 ## TL;DR
 
 - [Demo docker-stackfile.yml](doc/mailtainer-compose.yml)
+- [Demo account-config.yml](doc/mailtainer-cfg.yml)
 - Preconfigured IMAP/POP3 Mailserver to be configured with
   one single yaml file.
 - Out of the box support for Letsencrypt (SSL)
@@ -40,9 +41,14 @@ mkpasswd -m SHA-512 <password>
 
 
 
+
 ## Mail-Client Settings
 
 ### Mozilla Thunderbird
+
+![Settings](doc/settings-thunderbird.png)
+
+
 
 
 

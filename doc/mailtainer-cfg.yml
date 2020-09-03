@@ -2,5 +2,6 @@ postmaster: "test@test.tld"
 accounts:
   - account: "test@test.tld"
     passwordHash: "{SHA512-CRYPT}$6$Y1hniTKTGpvDGZd$ZApoELumRFst7RQc23bN2ifF0PGbvInUi5tDjmgcGqQwnWoTEP7rW2Mb1kngaIkvAhtUD61QbTs7S/fbJj3PE."
+    # Password: test
     aliases:
       - "info2@test.tld"
