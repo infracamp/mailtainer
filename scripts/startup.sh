@@ -19,7 +19,8 @@ chown -R root:root /data/letsencrypt
 service syslog-ng start
 service cron start
 
+service apache2 start
 /opt/scripts/letsencrypt.sh
-
+service apache2 stop
 
 
