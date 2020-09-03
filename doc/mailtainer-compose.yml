@@ -3,6 +3,7 @@ version: "3.7"
 services:
   mailtainer:
     image: infracamp/mailtainer:1.0
+    hostname: put.your.hostname.here
     deploy:
       placement:
         constraints: [node.role == manager]

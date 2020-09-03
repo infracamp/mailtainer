@@ -6,7 +6,7 @@
 # Debian specific:  Specifying a file name will cause the first
 # line of that file to be used as the name.  The Debian default
 # is /etc/mailname.
-myorigin = $myhostname
+myorigin = <?= MAILNAME ?>
 compatibility_level=2
 
 smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
@@ -30,17 +30,6 @@ smtpd_sasl_type = dovecot
 #   $postconf |grep queue_directory
 #   queue_directory = /var/spool/postfix
 smtpd_sasl_path = private/auth
-# Do not accept SASL authentication over unencrypted connections
-
-## TESTING ONLY
-smtpd_tls_auth_only = no
-smtp_sasl_security_options = noanonymous
-
-## PRODUCTION:
-#smtpd_tls_auth_only = yes
-#smtp_sasl_security_options = noplaintext noanonymous
-
-
 
 policy-spf_time_limit = 3600s
 
@@ -67,6 +56,14 @@ smtpd_tls_key_file=/data/letsencrypt/live/<?= MAILNAME ?>/privkey.pem
 smtpd_use_tls=yes
 smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
 smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
+
+## PRODUCTION:
+smtpd_tls_auth_only = yes
+smtp_sasl_security_options = noplaintext noanonymous
+<?php else: ?>
+## TESTING ONLY
+smtpd_tls_auth_only = no
+smtp_sasl_security_options = noanonymous
 <?php endif; ?>
 
 # See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
