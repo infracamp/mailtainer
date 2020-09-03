@@ -12,13 +12,16 @@ command:
     - "composer update"
     - "sudo scripts/install-mail.sh"
 
+  init:
+    - "sudo -E scripts/startup.sh"
   dev:
-    - "sudo scripts/startup.sh"
 
   run:
-    - "sudo -E scripts/startup.sh"
     - "sudo -E vendor/bin/cloudtool --autoload /opt/src/bootstrap.php --tpldir /opt/etc --target /etc"
     - "sudo -E scripts/restart-services.sh"
 
   config:
     - "sudo -E vendor/bin/cloudtool --autoload /opt/src/bootstrap.php --tpldir /opt/etc --target /etc --onchange /opt/scripts/restart-services.sh --watch"
+
+  interval:
+    - "sudo -E vendor/bin/cloudtool --autoload /opt/src/bootstrap.php --tpldir /opt/etc --target /etc"
