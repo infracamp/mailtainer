@@ -16,7 +16,9 @@ command:
     - "sudo scripts/startup.sh"
 
   run:
-    - "sudo scripts/startup.sh"
+    - "sudo -E scripts/startup.sh"
+    - "sudo -E vendor/bin/cloudtool --autoload /opt/src/bootstrap.php --tpldir /opt/etc --target /etc"
+    - "sudo -E script/restart-services.sh"
 
   config:
     - "sudo -E vendor/bin/cloudtool --autoload /opt/src/bootstrap.php --tpldir /opt/etc --target /etc --onchange /opt/scripts/restart-services.sh --watch"
