@@ -12,7 +12,7 @@
 
 ```bash
 sudo apt-get install docker.io curl
-sudo mkdir /mailtailer_data
+sudo mkdir /mailtainer_data
 sudo curl -o /mailtainer_data/mailtainer-cfg.yml https://raw.githubusercontent.com/infracamp/mailtainer/master/doc/mailtainer-cfg.yml
 sudo curl -o /mailtainer_data/mailtainer-compose.yml https://raw.githubusercontent.com/infracamp/mailtainer/master/doc/mailtainer-compose.yml
 ## Adjust the files mailtainer-cfg.yml and mailtainer-compose.yml
