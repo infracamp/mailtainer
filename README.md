@@ -53,6 +53,7 @@ mkpasswd -m SHA-512 <password>
 
 ## Debugging
 
+- [SMTP DNS Settings Checklist](doc/checklist-mail-config.md)
 
 
 ## Backup & Recovery
