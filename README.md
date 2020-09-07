@@ -78,7 +78,7 @@ data directory with pgp. To enable backups, fist create a pgp keypair
 ```
 gpg --gen-key
 gpg --output /mailtainer_data/public.pgp --armor --export your_email@domain.tld
-gpg --output ./private.pgp --armor --export-secret-key your_email@domain.tld
+gpg --output backupkeys.pgp --armor --export --export-options export-backup your_email@domain.tld
 ```
 
 | Environment                       | Default               | Description    |
@@ -92,17 +92,20 @@ gpg --output ./private.pgp --armor --export-secret-key your_email@domain.tld
 ```
 curl -fo /backup/location/backup.enc -u backup:<plain_auth_pass> http://mail.server.tld/export.php
 ```
+
+[Example backup script](doc/backup-script.sh)
+
 ### Restore from backup
 
 Import the private key
 ```
-gpg --import private.pgp
+gpg --import backupkeys.pgp
 ```
 
 Extract the data
 
 ```
-gpg -d backup.enc | tar -xz
+gpg -d backup-file.enc | tar -xz
 ```
 
 
