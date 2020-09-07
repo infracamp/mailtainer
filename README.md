@@ -86,6 +86,8 @@ gpg --output backupkeys.pgp --armor --export --export-options export-backup your
 | `BACKUP_PGP_PUBLIC_KEY_FILE`      | `/data/public.pgp`    | Specify the full path to public.pgp inside the container | 
 | `BACKUP_AUTH_PASS_HASH`           | (required)            | specify the crypted (`mkpasswd -m SHA-512`) password to use for basic auth |
 
+> To pass environment including "$"-character you have to double it (replace "$" to "$$")! 
+> (See [variable substituion](https://docs.docker.com/compose/compose-file/#variable-substitution) for more information)
 
 ### Download the backup via curl
 

@@ -21,6 +21,9 @@ if ( ! file_exists(BACKUP_PGP_PUBLIC_KEY_FILE))
 
 set_time_limit(3600);
 
+// Double import to parse output better
+phore_exec("gpg --homedir /tmp --import ?" ,[BACKUP_PGP_PUBLIC_KEY_FILE], true);
+
 $output = phore_exec("gpg --homedir /tmp --import ?" ,[BACKUP_PGP_PUBLIC_KEY_FILE], true);
 if ( ! preg_match("/\\<([a-z0-9.-_@]+)\\>/i", $output[0], $matches)) {
     throw new InvalidArgumentException("Cannot parse email from output");
