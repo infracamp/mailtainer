@@ -9,7 +9,8 @@
   "require": {
     "php": ">=7.1",
     "phore/cloudtool": "dev-master",
-    "phore/hydrator": "dev-master"
+    "phore/hydrator": "dev-master",
+    "phore/system": "dev-master"
   },
   "autoload": {
     "psr-4": {

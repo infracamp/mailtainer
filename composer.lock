@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "affba0a3d0a8af4b74704b1dcff50d75",
+    "content-hash": "4b3f4792eda88be244ec0018123f6b98",
     "packages": [
         {
             "name": "phore/cloudtool",
@@ -448,7 +448,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "phore/cloudtool": 20,
-        "phore/hydrator": 20
+        "phore/hydrator": 20,
+        "phore/system": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -25,3 +25,5 @@ define("RBL_CLIENT", "%RBL_CLIENT?sbl-xbl.spamhaus.org;dnsbl.sorbs.net%");
 
 define("CONFIG_FILE", "%CONFIG_FILE?/data/mailtainer-cfg.yml%");
 
+define("BACKUP_AUTH_PASS_HASH", '%BACKUP_AUTH_PASS_HASH?%');
+define("BACKUP_PGP_PUBLIC_KEY_FILE", '%BACKUP_PGP_PUBLIC_KEY_FILE?/data/public.pgp%');

@@ -56,9 +56,7 @@ mkpasswd -m SHA-512 <password>
 - [SMTP DNS Settings Checklist](doc/checklist-mail-config.md)
 
 
-## Backup & Recovery
 
-To backup, just copy `/data/dovecot` to an external server.
 
 
 ## Images
@@ -68,5 +66,43 @@ To backup, just copy `/data/dovecot` to an external server.
 | `infracamp/mailtainer:1.0`       | Stable build. Recent updates               |
 | `infracamp/mailtainer:1.0.x`     | Release build. Fixed version (no updates)  |
 | `infracamp/mailtainer:1.0-dev`   | Development build. Testing only            |
+
+## Backup & Recovery
+
+Mailtainer comes with an http backup utility. It encrypts the
+data directory with pgp. To enable backups, fist create a pgp keypair
+
+
+### Create a pgp key pair
+
+```
+gpg --gen-key
+gpg --output /mailtainer_data/public.pgp --armor --export your_email@domain.tld
+gpg --output ./private.pgp --armor --export-secret-key your_email@domain.tld
+```
+
+| Environment                       | Default               | Description    |
+|-----------------------------------|-----------------------|--------------------|
+| `BACKUP_PGP_PUBLIC_KEY_FILE`      | `/data/public.pgp`    | Specify the full path to public.pgp inside the container | 
+| `BACKUP_AUTH_PASS_HASH`           | (required)            | specify the crypted (`mkpasswd -m SHA-512`) password to use for basic auth |
+
+
+### Download the backup via curl
+
+```
+curl -fo /backup/location/backup.enc -u backup:<plain_auth_pass> http://mail.server.tld/export.php
+```
+### Restore from backup
+
+Import the private key
+```
+gpg --import private.pgp
+```
+
+Extract the data
+
+```
+gpg -d backup.enc | tar -xz
+```
 
 
