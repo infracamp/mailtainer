@@ -7,5 +7,5 @@ BACKUP_AUTH_PASS_PLAIN="plain passwd"
 
 BACKUP_LOCATION="/bku"
 
-
-curl -fo "$BACKUP_LOCATION/bku-$(date +%a).enc" -u backup:$BACKUP_AUTH_PASS_PLAIN http://$MAILTAINER_HOST/export.php
+## Download with now progress bar but show errors:
+curl -sSfo "$BACKUP_LOCATION/bku-$(date +%a).enc" -u backup:$BACKUP_AUTH_PASS_PLAIN http://$MAILTAINER_HOST/export.php
