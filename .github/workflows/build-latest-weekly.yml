@@ -14,6 +14,6 @@ jobs:
 
     steps:
     - name: Test pull data
-      run:
-    - name: Trigger testing run
-      run: "curl -X POST --data '{\"docker_tag\": \"1.0\"}' ${{ secrets.DAILY_DOCKERHUB_PULL_URL }}"
+      run: docker pull infacamp/mailtainer:1.0
+   # - name: Trigger testing run
+     # run: "curl -X POST --data '{\"docker_tag\": \"1.0\"}' ${{ secrets.DAILY_DOCKERHUB_PULL_URL }}"
