@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b3f4792eda88be244ec0018123f6b98",
+    "content-hash": "512e9b9bcf3007b39900a8bfe1fd4b9f",
     "packages": [
         {
             "name": "phore/cloudtool",
@@ -155,6 +155,63 @@
             "time": "2020-06-03T19:34:50+00:00"
         },
         {
+            "name": "phore/http-client",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phore/phore-http-client.git",
+                "reference": "5d506b0bf0c8c7fd2767710e325b55ee7185687e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phore/phore-http-client/zipball/5d506b0bf0c8c7fd2767710e325b55ee7185687e",
+                "reference": "5d506b0bf0c8c7fd2767710e325b55ee7185687e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-http": "*",
+                "ext-json": "*",
+                "phore/core": "*",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phore/cache": "*",
+                "phore/filesystem": "*",
+                "phore/objectstore": "*",
+                "phpunit/phpunit": "*"
+            },
+            "suggest": {
+                "phore/cache": "Use request caching"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phore\\HttpClient\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Leuffen",
+                    "email": "m@tth.es"
+                }
+            ],
+            "description": "Http client library for fast api access",
+            "homepage": "https://infracamp.org/phore/",
+            "keywords": [
+                "Keyword1",
+                "Keyword2"
+            ],
+            "time": "2020-05-14T09:50:11+00:00"
+        },
+        {
             "name": "phore/hydrator",
             "version": "dev-master",
             "source": {
@@ -252,12 +309,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-system.git",
-                "reference": "ecc5a518cd4514609e630938f4367a6d4a0b8269"
+                "reference": "7c5b9fb48c2c434cb8bcb5a7e2726f2ea5109835"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-system/zipball/ecc5a518cd4514609e630938f4367a6d4a0b8269",
-                "reference": "ecc5a518cd4514609e630938f4367a6d4a0b8269",
+                "url": "https://api.github.com/repos/phore/phore-system/zipball/7c5b9fb48c2c434cb8bcb5a7e2726f2ea5109835",
+                "reference": "7c5b9fb48c2c434cb8bcb5a7e2726f2ea5109835",
                 "shasum": ""
             },
             "require": {
@@ -288,7 +345,7 @@
             ],
             "description": "Execute shell commands",
             "homepage": "https://infracamp.org/project/phore",
-            "time": "2020-05-15T17:16:34+00:00"
+            "time": "2020-09-07T19:03:30+00:00"
         },
         {
             "name": "psr/http-message",
@@ -449,7 +506,8 @@
     "stability-flags": {
         "phore/cloudtool": 20,
         "phore/hydrator": 20,
-        "phore/system": 20
+        "phore/system": 20,
+        "phore/http-client": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

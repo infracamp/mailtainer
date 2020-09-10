@@ -11,6 +11,10 @@
 # ==========================================================================
 smtp      inet  n       -       -       -       -       smtpd
 2525	  inet  n       -       -       -       -       smtpd
+
+httpfwd   unix  -       n       n       -       -       pipe
+  flags=XO size=500000 user=vmail argv=/opt/bin/forward_http.php ${recipient}
+
 #smtp      inet  n       -       -       -       1       postscreen
 #smtpd     pass  -       -       -       -       -       smtpd
 #dnsblog   unix  -       -       -       -       0       dnsblog
@@ -83,6 +87,7 @@ scache    unix  -       -       -       -       1       scache
 #
 maildrop  unix  -       n       n       -       -       pipe
   flags=DRhu user=vmail argv=/usr/bin/maildrop -d ${recipient}
+
 #
 # ====================================================================
 #

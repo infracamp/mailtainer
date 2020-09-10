@@ -17,9 +17,11 @@ biff = no
 append_dot_mydomain = no
 
 # Uncomment the next line to generate "delayed mail" warnings
-#delay_warning_time = 4h
+delay_warning_time = 2h
 
 readme_directory = no
+mail_spool_directory = /data/postfix
+maillog_file=/data/log/postfix.log
 
 content_filter=smtp-amavis:[127.0.0.1]:10024
 
@@ -89,6 +91,12 @@ smtpd_recipient_restrictions =
     reject_rbl_client <?= $cur ?>
 <?php endforeach; ?>
 
+## Allow only MAIL FROM: Adresses listed in Aliases of this account
+smtpd_sender_login_maps = hash:/etc/postfix/virtual_aliases
+smtpd_sender_restrictions =
+    reject_sender_login_mismatch
+
+
 
 smtpd_helo_restrictions =
 	permit_sasl_authenticated
@@ -117,6 +125,7 @@ inet_interfaces = all
 # The path relative to $queue_directory, that is:
 #    /var/spool/postfix/private/dovecot-lmtp
 virtual_transport = lmtp:unix:private/dovecot-lmtp
+transport_maps = hash:/etc/postfix/transport
 
 # Check domains only, query users and aliases in Dovecot
 #

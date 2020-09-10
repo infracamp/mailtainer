@@ -5,3 +5,10 @@ accounts:
     # Password: test
     aliases:
       - "info2@test.tld"
+
+
+httpForward:
+  - targetUrl: "http://localhost/test.php"
+    basicAuth: "user:pass"
+    aliases:
+      - "fwd@test.tld"

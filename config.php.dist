@@ -19,6 +19,11 @@ define("VERSION_INFO", "v0.1.%VERSION_NUMBER% (%VERSION_DATE_COMPACT%)");
  */
 define("MAILNAME", "%MAILNAME%");
 
+/**
+ * Enable debug logging
+ */
+define("DEBUG", (bool)"%DEBUG?0%");
+
 define("ENABLE_LETSENCRYPT", (bool)"%ENABLE_LETSENCRYPT?0%");
 
 define("RBL_CLIENT", "%RBL_CLIENT?sbl-xbl.spamhaus.org;dnsbl.sorbs.net%");

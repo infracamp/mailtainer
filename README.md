@@ -11,6 +11,8 @@ Letsencrypt.
     - [Demo account-config.yml](doc/mailtainer-cfg.yml)
 - Out of the box support for Letsencrypt (SSL)
 - Setup & ready to go in 60 seconds
+- Build in backup utility using GPG encryption
+- Forward mails to HTTP Push URL
 
 ## Deployment / Configuration
 
@@ -41,7 +43,9 @@ mkpasswd -m SHA-512 <password>
 | `MAILNAME`       | --          | The hostname this server is running on                           |
 | `CONFIG_FILE`    | `/data/mailtainer-cfg.yml` | The path to the config file inside the container  |
 | `RBL_CLIENT`     | `sbl-xbl.spamhaus.org;dnsbl.sorbs.net` | RBL hosts |
-| `ENABLE_LETSENCRYPT` | 1   | Enable automatic acquiring / renewing of SSL certificates |
+| `ENABLE_LETSENCRYPT` | 1   | Enable automatic acquiring / renewing of SSL certificates        |
+| `DEBUG`              | 0   | Set to 1 to enable debug logging (may contain sensitive data)    |
+
 
 ## Mail-Client Settings
 
@@ -49,15 +53,9 @@ mkpasswd -m SHA-512 <password>
 
 ![Settings](doc/settings-thunderbird.png)
 
-
-
 ## Debugging
 
 - [SMTP DNS Settings Checklist](doc/checklist-mail-config.md)
-
-
-
-
 
 ## Images
 
@@ -78,7 +76,7 @@ data directory with pgp. To enable backups, fist create a pgp keypair
 ```
 gpg --gen-key
 gpg --output /mailtainer_data/public.pgp --armor --export your_email@domain.tld
-gpg --output backupkeys.pgp --armor --export --export-options export-backup your_email@domain.tld
+gpg --export-secret-keys --armor --output private-key-bku-leuffen.pgp bku@leuffen.de
 ```
 
 | Environment                       | Default               | Description    |

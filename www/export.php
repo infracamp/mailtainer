@@ -31,7 +31,7 @@ if ( ! preg_match("/\\<([a-z0-9.-_@]+)\\>/i", $output[0], $matches)) {
 $email = $matches[1];
 
 header("Content-Type: application/binary");
-passthru("sudo /bin/tar -czf - /data | gpg --homedir /tmp --always-trust -e -r '". escapeshellarg($email) . "'", $ret);
+passthru("sudo /bin/tar -czf - /data/dovecot | gpg --homedir /tmp --always-trust -e -r '". escapeshellarg($email) . "'", $ret);
 if ($ret !== 0)
     throw new Exception("Error running compressor");
 

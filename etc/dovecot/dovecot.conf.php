@@ -1,15 +1,17 @@
 # 2.2.13: /etc/dovecot/dovecot.conf
 # OS: Linux 3.16.0-042stab117.10 x86_64 Debian 8.5
 
-log_path = /var/log/dovecot.log
+log_path = /data/log/dovecot.log
 # If you want everything in one file, just don't specify info_log_path and debug_log_path
-info_log_path = /var/log/dovecot-info.log
+info_log_path = /data/log/dovecot-info.log
 # Leave empty in order to send debug-level messages to info_log_path
-debug_log_path = /var/log/dovecot-debug.log
+debug_log_path = /data/log/dovecot-debug.log
 
+<?php if(DEBUG): ?>
 auth_debug=yes
 mail_debug=yes
 auth_debug_passwords=yes
+<?php endif ?>
 
 <?php if(ENABLE_LETSENCRYPT): ?>
 ssl = required
