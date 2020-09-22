@@ -12,6 +12,8 @@ compatibility_level=2
 smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
 biff = no
 
+maillog_file_prefixes=/data/log
+maillog_file=/data/log/postfix.log
 
 # appending .domain is the MUA's job.
 append_dot_mydomain = no

@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "512e9b9bcf3007b39900a8bfe1fd4b9f",
@@ -62,12 +62,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-core.git",
-                "reference": "c77383525a84da51ea32d9a7696db8b6e6e8c157"
+                "reference": "78b98f759e055380ee5d3837aafd10e443339010"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-core/zipball/c77383525a84da51ea32d9a7696db8b6e6e8c157",
-                "reference": "c77383525a84da51ea32d9a7696db8b6e6e8c157",
+                "url": "https://api.github.com/repos/phore/phore-core/zipball/78b98f759e055380ee5d3837aafd10e443339010",
+                "reference": "78b98f759e055380ee5d3837aafd10e443339010",
                 "shasum": ""
             },
             "require": {
@@ -105,7 +105,7 @@
             ],
             "description": "Phore core library",
             "homepage": "https://infracamp.org/project/phore",
-            "time": "2020-09-02T13:22:32+00:00"
+            "time": "2020-09-22T10:24:50+00:00"
         },
         {
             "name": "phore/filesystem",
@@ -217,12 +217,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-hydrator.git",
-                "reference": "96157b2aec19e66baae598ec24cba329884ea52b"
+                "reference": "b6ebf3958d05eee9969869aff8f433d79229085e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-hydrator/zipball/96157b2aec19e66baae598ec24cba329884ea52b",
-                "reference": "96157b2aec19e66baae598ec24cba329884ea52b",
+                "url": "https://api.github.com/repos/phore/phore-hydrator/zipball/b6ebf3958d05eee9969869aff8f433d79229085e",
+                "reference": "b6ebf3958d05eee9969869aff8f433d79229085e",
                 "shasum": ""
             },
             "require": {
@@ -252,7 +252,7 @@
                 }
             ],
             "description": "Unserialize arrays into object structure",
-            "time": "2020-09-03T15:59:19+00:00"
+            "time": "2020-09-18T22:32:08+00:00"
         },
         {
             "name": "phore/log",
@@ -260,12 +260,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-log.git",
-                "reference": "553dddb3403679f1e080b7078164bedb5280a547"
+                "reference": "9bfde9d18d94c8fa0450bccc98801d24dc2cb83b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-log/zipball/553dddb3403679f1e080b7078164bedb5280a547",
-                "reference": "553dddb3403679f1e080b7078164bedb5280a547",
+                "url": "https://api.github.com/repos/phore/phore-log/zipball/9bfde9d18d94c8fa0450bccc98801d24dc2cb83b",
+                "reference": "9bfde9d18d94c8fa0450bccc98801d24dc2cb83b",
                 "shasum": ""
             },
             "require": {
@@ -298,10 +298,10 @@
             "description": "Logging class",
             "homepage": "https://infracamp.org/project/phore",
             "keywords": [
-                "Keyword1",
-                "Keyword2"
+                "logging",
+                "syslog"
             ],
-            "time": "2019-12-06T00:12:51+00:00"
+            "time": "2020-09-09T09:19:09+00:00"
         },
         {
             "name": "phore/system",
@@ -403,12 +403,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
+                "reference": "dd738d0b4491f32725492cf345f6b501f5922fec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
-                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/dd738d0b4491f32725492cf345f6b501f5922fec",
+                "reference": "dd738d0b4491f32725492cf345f6b501f5922fec",
                 "shasum": ""
             },
             "require": {
@@ -432,7 +432,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for logging libraries",
@@ -442,7 +442,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2020-03-23T09:12:05+00:00"
+            "time": "2020-09-18T06:44:51+00:00"
         },
         {
             "name": "text/template",
@@ -514,5 +514,6 @@
     "platform": {
         "php": ">=7.1"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
