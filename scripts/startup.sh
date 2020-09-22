@@ -20,7 +20,7 @@ chown -R root:root /data/letsencrypt
 chown -R root:root /data/log
 
 
-#service syslog-ng start
+service syslog-ng start
 service cron start
 
 service apache2 start

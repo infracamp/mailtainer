@@ -12,8 +12,8 @@ compatibility_level=2
 smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
 biff = no
 
-maillog_file_prefixes=/data/log
-maillog_file=/data/log/postfix.log
+#maillog_file_prefixes=/data/log
+#maillog_file=/data/log/postfix.log
 
 # appending .domain is the MUA's job.
 append_dot_mydomain = no
@@ -23,7 +23,6 @@ delay_warning_time = 2h
 
 readme_directory = no
 mail_spool_directory = /data/postfix
-maillog_file=/data/log/postfix.log
 
 content_filter=smtp-amavis:[127.0.0.1]:10024
 

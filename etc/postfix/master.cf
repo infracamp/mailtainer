@@ -15,7 +15,7 @@ smtp      inet  n       -       -       -       -       smtpd
 httpfwd   unix  -       n       n       -       -       pipe
   flags=XO size=500000 user=vmail argv=/opt/bin/forward_http.php ${recipient}
 
-postlog   unix-dgram n  -       n       -       1       postlogd
+#postlog   unix-dgram n  -       n       -       1       postlogd
 
 #smtp      inet  n       -       -       -       1       postscreen
 #smtpd     pass  -       -       -       -       -       smtpd

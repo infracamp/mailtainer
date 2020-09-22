@@ -9,6 +9,7 @@ config_file:
 
 command:
   build:
+    - "sudo rm /kickstart/run/prepare.d/40-start-container-log.sh && sudo rm /dev/log"
     - "echo \"www-data   ALL = (ALL) NOPASSWD: /bin/tar\" | sudo tee --append /etc/sudoers"
     - "composer update"
     - "sudo scripts/install-mail.sh"
