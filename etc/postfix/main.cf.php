@@ -7,13 +7,12 @@
 # line of that file to be used as the name.  The Debian default
 # is /etc/mailname.
 myorigin = <?= MAILNAME ?>
+
 compatibility_level=2
 
 smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
 biff = no
 
-#maillog_file_prefixes=/data/log
-#maillog_file=/data/log/postfix.log
 
 # appending .domain is the MUA's job.
 append_dot_mydomain = no
@@ -26,6 +25,8 @@ mail_spool_directory = /data/postfix
 
 content_filter=smtp-amavis:[127.0.0.1]:10024
 
+# Limit incoming mail to 100 MB
+message_size_limit = 102400000
 
 smtpd_sasl_auth_enable = yes
 smtpd_sasl_type = dovecot
@@ -68,6 +69,7 @@ smtp_sasl_security_options = noplaintext noanonymous
 smtpd_tls_auth_only = no
 smtp_sasl_security_options = noanonymous
 <?php endif; ?>
+
 
 # See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
 # information on enabling SSL in the smtp client.
