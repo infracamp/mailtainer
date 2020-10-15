@@ -9,6 +9,6 @@ jobs:
       with:
         submodules: recursive
 
-#    - name: Build the container
-#      run: "./kickstart.sh :test"
+    - name: Build the container
+      run: "./kickstart.sh :test"
 
