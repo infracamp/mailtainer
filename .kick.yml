@@ -29,3 +29,6 @@ command:
 
   interval:
     - "sudo -E vendor/bin/cloudtool --autoload /opt/src/bootstrap.php --tpldir /opt/etc --target /etc"
+
+  test:
+    - "curl -f http://localhost"
