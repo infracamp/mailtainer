@@ -1,7 +1,10 @@
 version: 1
 from: "nfra/kickstart-flavor-php:7.4"
 
-apache_fallback_resource: "/index.html"
+apache_document_root: /opt/www
+apache_vhost_config: |
+  FallbackResource /index.html
+  php_admin_value file_uploads 0
 
 config_file:
   template: "config.php.dist"
