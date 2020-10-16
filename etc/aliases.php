@@ -11,6 +11,7 @@ if ( ! $config instanceof \Infracamp\Mailtainer\Type\TConfig)
 ?>
 
 postmaster root
+amavis root
 clamav root
 
 
