@@ -108,4 +108,11 @@ Extract the data
 gpg -d backup-file.enc | tar -xz
 ```
 
+## Block IP Addresses using iptables
 
+You can't use ufw to block traffic to docker containers directly.
+Use the ufw forward rule instead.
+
+```
+iptables -I FORWARD -s <ip>/24 -j DROP
+```
