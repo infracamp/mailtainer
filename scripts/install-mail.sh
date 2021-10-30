@@ -20,7 +20,7 @@ adduser clamav amavis
 sudo -i -u amavis razor-admin -create
 sudo -i -u amavis razor-admin -register
 
-#freshclam
+freshclam
 sed -i 's/#SYSLOGNG_OPTS=\"--no-caps\"/SYSLOGNG_OPTS=\"--no-caps\"/' /etc/default/syslog-ng
 
 
