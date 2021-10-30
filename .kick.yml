@@ -1,10 +1,8 @@
 version: 1
-from: "nfra/kickstart-flavor-php:7.4"
+from: "ghcr.io/nfra-project/kickstart-flavor-php:unstable"
+ports: "80:80/tcp;25:25/tcp;143:143/tcp;465:465/tcp;993:993/tcp"
 
-apache_document_root: /opt/www
-apache_vhost_config: |
-  FallbackResource /index.html
-  php_admin_value file_uploads 0
+packages: [php8.0-curl, php8.0-http, php8.0-raphf, php8.0-zip]
 
 config_file:
   template: "config.php.dist"

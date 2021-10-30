@@ -1,4 +1,4 @@
-FROM nfra/kickstart-flavor-php:7.4
+FROM ghcr.io/nfra-project/kickstart-flavor-php:unstable
 
 ENV DEV_CONTAINER_NAME="mailtainer"
 
