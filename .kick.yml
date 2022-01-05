@@ -13,6 +13,7 @@ command:
     - "echo \"www-data   ALL = (ALL) NOPASSWD: /bin/tar\" | sudo tee --append /etc/sudoers"
     - "composer update"
     - "sudo scripts/install-mail.sh"
+    - "sudo phpdismod propro"
 
   init:
     - "sudo -E scripts/startup.sh"
