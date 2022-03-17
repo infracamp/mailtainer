@@ -1,0 +1,58 @@
+## From: github.com/nfra-project/nfra-skel
+##
+## Build on push to braches
+##
+## Examples
+## Branch: release/1.1   -> ghcr.io/some/repo:1.1
+
+name: schedule-1.0
+
+## SECURITY: Do not youe "pull_request_target" nr "pull_request" here! See
+## https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
+on:
+  schedule:
+    - cron: '15 15 * * *'  # on Wednesday at 6:22
+
+jobs:
+  build_and_push_github:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: release/1.0    # Modify this to your branch for releases
+      - name: Build
+        run: |
+          docker build --pull --no-cache -t test/image .
+
+      - name: Test
+        run: |
+          cd test/
+          ./../.kicker/kickstart.static.sh --offline :test
+          cd ..
+
+      - name: Push
+        run: |
+          CI_BRANCH=$(git tag)
+          echo "CI_BRANCH 1: $CI_BRANCH"
+          [[ "$CI_BRANCH" == "" ]] && CI_BRANCH=$(git branch --show-current)
+          echo "CI_BRANCH 2: $CI_BRANCH"
+          [[ "$CI_BRANCH" == "master" ]] && CI_BRANCH=unstable
+          echo "CI_BRANCH 3: $CI_BRANCH"
+          [[ "$CI_BRANCH" == "main" ]] && CI_BRANCH=unstable
+          echo "CI_BRANCH 2: $CI_BRANCH"
+          CI_BUILD_NAME=${CI_BRANCH#release/}
+          CI_BUILD_NAME=${CI_BUILD_NAME#refs/tags/release/}
+          CI_REGISTRY_IMAGE=$CI_REGISTRY/$GITHUB_REPOSITORY:$CI_BUILD_NAME
+          echo "Final image name: $CI_REGISTRY_IMAGE"
+          docker tag test/image $CI_REGISTRY_IMAGE
+          echo "$CI_REGISTRY_PASSWORD" | docker login --username $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+          docker push $CI_REGISTRY_IMAGE
+        env:
+          CI_REGISTRY: ghcr.io
+          CI_REGISTRY_USER: giblab-user
+          CI_REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+
+
+
