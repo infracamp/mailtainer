@@ -59,11 +59,13 @@ mkpasswd -m SHA-512 <password>
 
 ## Images
 
-| Image                            | Description                                |
-|----------------------------------|--------------------------------------------|
-| `infracamp/mailtainer:1.0`       | Stable build. Recent updates               |
-| `infracamp/mailtainer:1.0.x`     | Release build. Fixed version (no updates)  |
-| `infracamp/mailtainer:1.0-dev`   | Development build. Testing only            |
+Docker Images are availabe on [Github-Packages](https://github.com/infracamp/mailtainer/pkgs/container/mailtainer)
+
+| Image                                   | Description                                |
+|-----------------------------------------|--------------------------------------------|
+| `ghcr.io/infracamp/mailtainer:1.0`      | Stable build. Recent updates               |
+| `ghcr.io/infracamp/mailtainer:1.0.x`    | Release build. Fixed version (no updates)  |
+| `ghcr.io/infracamp/mailtainer:unstable` | Development build. Testing only            |
 
 ## Backup & Recovery
 
