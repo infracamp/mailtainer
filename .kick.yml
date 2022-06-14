@@ -1,5 +1,5 @@
 version: 1
-from: "ghcr.io/nfra-project/kickstart-flavor-php:8.0"
+from: "ghcr.io/nfra-project/kickstart-flavor-php:8.1"
 ports: "80:80/tcp;25:25/tcp;143:143/tcp;465:465/tcp;993:993/tcp"
 
 packages: [php8.0-curl, php8.0-http, php8.0-raphf, php8.0-zip]
