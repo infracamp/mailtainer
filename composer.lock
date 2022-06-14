@@ -67,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-core.git",
-                "reference": "78b98f759e055380ee5d3837aafd10e443339010"
+                "reference": "09bced5d8992c315eefbd5e6d15ff88e3a5a7399"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-core/zipball/78b98f759e055380ee5d3837aafd10e443339010",
-                "reference": "78b98f759e055380ee5d3837aafd10e443339010",
+                "url": "https://api.github.com/repos/phore/phore-core/zipball/09bced5d8992c315eefbd5e6d15ff88e3a5a7399",
+                "reference": "09bced5d8992c315eefbd5e6d15ff88e3a5a7399",
                 "shasum": ""
             },
             "require": {
@@ -92,12 +92,12 @@
             "default-branch": true,
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Phore\\Core\\": "src/"
-                },
                 "files": [
                     "src/functions.inc.php"
-                ]
+                ],
+                "psr-4": {
+                    "Phore\\Core\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -115,7 +115,7 @@
                 "issues": "https://github.com/phore/phore-core/issues",
                 "source": "https://github.com/phore/phore-core/tree/master"
             },
-            "time": "2020-09-22T10:24:50+00:00"
+            "time": "2022-05-24T12:36:08+00:00"
         },
         {
             "name": "phore/filesystem",
@@ -123,33 +123,33 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-filesystem.git",
-                "reference": "2a4edc48488b1355742b89cb4f052367f1efaa18"
+                "reference": "3939487d5e4a84befe0b4045cf184bb2cfa7df36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-filesystem/zipball/2a4edc48488b1355742b89cb4f052367f1efaa18",
-                "reference": "2a4edc48488b1355742b89cb4f052367f1efaa18",
+                "url": "https://api.github.com/repos/phore/phore-filesystem/zipball/3939487d5e4a84befe0b4045cf184bb2cfa7df36",
+                "reference": "3939487d5e4a84befe0b4045cf184bb2cfa7df36",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-yaml": "*",
                 "phore/core": "*",
-                "php": ">7.1",
+                "php": ">8.1",
                 "psr/http-message": "^1.0@dev"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.0@dev"
+                "phpunit/phpunit": "^9.5"
             },
             "default-branch": true,
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Phore\\FileSystem\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Phore\\FileSystem\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -167,7 +167,7 @@
                 "issues": "https://github.com/phore/phore-filesystem/issues",
                 "source": "https://github.com/phore/phore-filesystem/tree/master"
             },
-            "time": "2021-03-05T19:47:08+00:00"
+            "time": "2022-06-08T16:56:38+00:00"
         },
         {
             "name": "phore/http-client",
@@ -175,12 +175,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-http-client.git",
-                "reference": "6e698d8e1f5a220bd5d6a92fb9a9d0c275060953"
+                "reference": "15e0cb1b8127afdbd0906316e93cc6ce1c8e2d1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-http-client/zipball/6e698d8e1f5a220bd5d6a92fb9a9d0c275060953",
-                "reference": "6e698d8e1f5a220bd5d6a92fb9a9d0c275060953",
+                "url": "https://api.github.com/repos/phore/phore-http-client/zipball/15e0cb1b8127afdbd0906316e93cc6ce1c8e2d1b",
+                "reference": "15e0cb1b8127afdbd0906316e93cc6ce1c8e2d1b",
                 "shasum": ""
             },
             "require": {
@@ -202,12 +202,12 @@
             "default-branch": true,
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Phore\\HttpClient\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Phore\\HttpClient\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -229,7 +229,7 @@
                 "issues": "https://github.com/phore/phore-http-client/issues",
                 "source": "https://github.com/phore/phore-http-client/tree/master"
             },
-            "time": "2021-02-17T13:15:16+00:00"
+            "time": "2022-04-12T13:31:25+00:00"
         },
         {
             "name": "phore/hydrator",
@@ -237,12 +237,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-hydrator.git",
-                "reference": "ffd6595bbb392069b7881230d5a8ebd8ffa7bb62"
+                "reference": "48460bf7918291174af2458fe0e6a105d6f798d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-hydrator/zipball/ffd6595bbb392069b7881230d5a8ebd8ffa7bb62",
-                "reference": "ffd6595bbb392069b7881230d5a8ebd8ffa7bb62",
+                "url": "https://api.github.com/repos/phore/phore-hydrator/zipball/48460bf7918291174af2458fe0e6a105d6f798d2",
+                "reference": "48460bf7918291174af2458fe0e6a105d6f798d2",
                 "shasum": ""
             },
             "require": {
@@ -250,17 +250,17 @@
                 "php": ">=7.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "*"
+                "phore/tester": "*"
             },
             "default-branch": true,
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Phore\\Hydrator\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Phore\\Hydrator\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -277,7 +277,7 @@
                 "issues": "https://github.com/phore/phore-hydrator/issues",
                 "source": "https://github.com/phore/phore-hydrator/tree/master"
             },
-            "time": "2021-10-28T12:38:49+00:00"
+            "time": "2022-05-18T16:51:55+00:00"
         },
         {
             "name": "phore/log",
@@ -304,12 +304,12 @@
             "default-branch": true,
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Phore\\Log\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Phore\\Log\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -329,7 +329,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phore/phore-log/issues",
-                "source": "https://github.com/phore/phore-log/tree/v1.1.0"
+                "source": "https://github.com/phore/phore-log/tree/dev-1.1"
             },
             "time": "2020-09-09T09:19:09+00:00"
         },
@@ -357,12 +357,12 @@
             "default-branch": true,
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Phore\\System\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Phore\\System\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -562,5 +562,5 @@
         "php": ">=7.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
