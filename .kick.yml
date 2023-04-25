@@ -9,6 +9,7 @@ config_file:
   template: "config.php.dist"
   target: "config.php"
 
+
 command:
   build:
     - "echo \"www-data   ALL = (ALL) NOPASSWD: /bin/tar\" | sudo tee --append /etc/sudoers"

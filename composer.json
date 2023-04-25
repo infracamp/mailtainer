@@ -18,5 +18,6 @@
       "Infracamp\\Mailtainer\\": "src/"
     }
   },
+  
   "minimum-stability": "dev"
 }
