@@ -10,6 +10,8 @@ name: schedule-1.0
 ## SECURITY: Do not youe "pull_request_target" nr "pull_request" here! See
 ## https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
 on:
+  workflow_dispatch:
+
   schedule:
     - cron: '15 15 * * *'  # on Wednesday at 6:22
 
