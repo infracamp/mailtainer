@@ -67,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-core.git",
-                "reference": "09bced5d8992c315eefbd5e6d15ff88e3a5a7399"
+                "reference": "e5f422164253dae0aa9e74786d609ee62e85c09c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-core/zipball/09bced5d8992c315eefbd5e6d15ff88e3a5a7399",
-                "reference": "09bced5d8992c315eefbd5e6d15ff88e3a5a7399",
+                "url": "https://api.github.com/repos/phore/phore-core/zipball/e5f422164253dae0aa9e74786d609ee62e85c09c",
+                "reference": "e5f422164253dae0aa9e74786d609ee62e85c09c",
                 "shasum": ""
             },
             "require": {
@@ -115,7 +115,7 @@
                 "issues": "https://github.com/phore/phore-core/issues",
                 "source": "https://github.com/phore/phore-core/tree/master"
             },
-            "time": "2022-05-24T12:36:08+00:00"
+            "time": "2023-12-02T11:12:41+00:00"
         },
         {
             "name": "phore/filesystem",
@@ -123,12 +123,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-filesystem.git",
-                "reference": "3939487d5e4a84befe0b4045cf184bb2cfa7df36"
+                "reference": "a312f68012d9f67f215b6328863dec1ae152630f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-filesystem/zipball/3939487d5e4a84befe0b4045cf184bb2cfa7df36",
-                "reference": "3939487d5e4a84befe0b4045cf184bb2cfa7df36",
+                "url": "https://api.github.com/repos/phore/phore-filesystem/zipball/a312f68012d9f67f215b6328863dec1ae152630f",
+                "reference": "a312f68012d9f67f215b6328863dec1ae152630f",
                 "shasum": ""
             },
             "require": {
@@ -167,7 +167,7 @@
                 "issues": "https://github.com/phore/phore-filesystem/issues",
                 "source": "https://github.com/phore/phore-filesystem/tree/master"
             },
-            "time": "2022-06-08T16:56:38+00:00"
+            "time": "2024-01-18T13:57:00+00:00"
         },
         {
             "name": "phore/http-client",
@@ -175,17 +175,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-http-client.git",
-                "reference": "15e0cb1b8127afdbd0906316e93cc6ce1c8e2d1b"
+                "reference": "a1557dffb2767c8d893d7f4c59c54b9e5aab26ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-http-client/zipball/15e0cb1b8127afdbd0906316e93cc6ce1c8e2d1b",
-                "reference": "15e0cb1b8127afdbd0906316e93cc6ce1c8e2d1b",
+                "url": "https://api.github.com/repos/phore/phore-http-client/zipball/a1557dffb2767c8d893d7f4c59c54b9e5aab26ef",
+                "reference": "a1557dffb2767c8d893d7f4c59c54b9e5aab26ef",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "ext-http": "*",
                 "ext-json": "*",
                 "phore/core": "*",
                 "php": ">=7.1"
@@ -229,7 +228,7 @@
                 "issues": "https://github.com/phore/phore-http-client/issues",
                 "source": "https://github.com/phore/phore-http-client/tree/master"
             },
-            "time": "2022-04-12T13:31:25+00:00"
+            "time": "2024-01-30T11:20:56+00:00"
         },
         {
             "name": "phore/hydrator",
@@ -237,12 +236,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-hydrator.git",
-                "reference": "48460bf7918291174af2458fe0e6a105d6f798d2"
+                "reference": "5d2d9751b69673d3a9d81614cc1d869d8bd9c489"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-hydrator/zipball/48460bf7918291174af2458fe0e6a105d6f798d2",
-                "reference": "48460bf7918291174af2458fe0e6a105d6f798d2",
+                "url": "https://api.github.com/repos/phore/phore-hydrator/zipball/5d2d9751b69673d3a9d81614cc1d869d8bd9c489",
+                "reference": "5d2d9751b69673d3a9d81614cc1d869d8bd9c489",
                 "shasum": ""
             },
             "require": {
@@ -277,7 +276,7 @@
                 "issues": "https://github.com/phore/phore-hydrator/issues",
                 "source": "https://github.com/phore/phore-hydrator/tree/master"
             },
-            "time": "2022-05-18T16:51:55+00:00"
+            "time": "2023-11-22T13:25:01+00:00"
         },
         {
             "name": "phore/log",
@@ -339,12 +338,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-system.git",
-                "reference": "7c5b9fb48c2c434cb8bcb5a7e2726f2ea5109835"
+                "reference": "66ba2f62c35a496901c658e51466145970f7afe9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-system/zipball/7c5b9fb48c2c434cb8bcb5a7e2726f2ea5109835",
-                "reference": "7c5b9fb48c2c434cb8bcb5a7e2726f2ea5109835",
+                "url": "https://api.github.com/repos/phore/phore-system/zipball/66ba2f62c35a496901c658e51466145970f7afe9",
+                "reference": "66ba2f62c35a496901c658e51466145970f7afe9",
                 "shasum": ""
             },
             "require": {
@@ -380,30 +379,29 @@
                 "issues": "https://github.com/phore/phore-system/issues",
                 "source": "https://github.com/phore/phore-system/tree/master"
             },
-            "time": "2020-09-07T19:03:30+00:00"
+            "time": "2022-10-21T23:12:46+00:00"
         },
         {
             "name": "psr/http-message",
-            "version": "dev-master",
+            "version": "1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
-                "reference": "efd67d1dc14a7ef4fc4e518e7dee91c271d524e4"
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/efd67d1dc14a7ef4fc4e518e7dee91c271d524e4",
-                "reference": "efd67d1dc14a7ef4fc4e518e7dee91c271d524e4",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": "^7.2 || ^8.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -432,9 +430,9 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-message/tree/master"
+                "source": "https://github.com/php-fig/http-message/tree/1.1"
             },
-            "time": "2019-08-29T13:16:46+00:00"
+            "time": "2023-04-04T09:50:52+00:00"
         },
         {
             "name": "psr/log",
@@ -492,12 +490,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dermatthes/text-template.git",
-                "reference": "83d7b2b9c1afddebe3f5dc081c3ac2d4fba7c2eb"
+                "reference": "f4753d63755b9d7ace119a99221d1cc3ae506b21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dermatthes/text-template/zipball/83d7b2b9c1afddebe3f5dc081c3ac2d4fba7c2eb",
-                "reference": "83d7b2b9c1afddebe3f5dc081c3ac2d4fba7c2eb",
+                "url": "https://api.github.com/repos/dermatthes/text-template/zipball/f4753d63755b9d7ace119a99221d1cc3ae506b21",
+                "reference": "f4753d63755b9d7ace119a99221d1cc3ae506b21",
                 "shasum": ""
             },
             "require": {
@@ -542,9 +540,9 @@
             ],
             "support": {
                 "issues": "https://github.com/dermatthes/text-template/issues",
-                "source": "https://github.com/dermatthes/text-template/tree/v2.7.2"
+                "source": "https://github.com/dermatthes/text-template/tree/v2.8.5"
             },
-            "time": "2021-10-20T20:33:54+00:00"
+            "time": "2023-06-26T17:11:41+00:00"
         }
     ],
     "packages-dev": [],
@@ -562,5 +560,5 @@
         "php": ">=7.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

@@ -15,7 +15,7 @@ biff = no
 
 # Mitigation against SMTP smuggling
 smtpd_forbid_bare_newline = normalize
-smtpd_forbid_bare_newline_exclusions = $mynetworks
+smtpd_forbid_bare_newline_exclusions =
 
 # appending .domain is the MUA's job.
 append_dot_mydomain = no

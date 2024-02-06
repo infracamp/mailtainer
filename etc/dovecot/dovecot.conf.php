@@ -62,7 +62,7 @@ userdb {
 }
 
 auth_mechanisms = plain login cram-md5 scram-sha-1
-disable_plaintext_auth = no
+disable_plaintext_auth = yes
 
 service auth-worker {
   # Forbid to access /etc/shadow
