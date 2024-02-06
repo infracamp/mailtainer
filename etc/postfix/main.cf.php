@@ -13,6 +13,9 @@ compatibility_level=2
 smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
 biff = no
 
+# Mitigation against SMTP smuggling
+smtpd_forbid_bare_newline = normalize
+smtpd_forbid_bare_newline_exclusions = $mynetworks
 
 # appending .domain is the MUA's job.
 append_dot_mydomain = no
