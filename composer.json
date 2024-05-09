@@ -9,7 +9,7 @@
   "require": {
     "php": ">=7.1",
     "phore/cloudtool": "v1.0.0",
-    "phore/hydrator": "dev-master",
+    "phore/hydrator": "v1.1.0",
     "phore/system": "*",
     "phore/http-client": "dev-master"
   },
