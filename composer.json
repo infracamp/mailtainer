@@ -8,10 +8,10 @@
   ],
   "require": {
     "php": ">=7.1",
-    "phore/cloudtool": "v1.0.0",
-    "phore/hydrator": "v1.1.0",
+    "phore/cloudtool": "^1.0.0",
+    "phore/hydrator": "^1.1.0",
     "phore/system": "*",
-    "phore/http-client": "v1.0.9"
+    "phore/http-client": "^1.0.9"
   },
   "autoload": {
     "psr-4": {
