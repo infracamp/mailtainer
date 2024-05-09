@@ -8,9 +8,9 @@
   ],
   "require": {
     "php": ">=7.1",
-    "phore/cloudtool": "dev-master",
-    "phore/hydrator": "dev-master",
-    "phore/system": "dev-master",
+    "phore/cloudtool": "v1.0.0",
+    "phore/hydrator": "v1.1.0",
+    "phore/system": "*",
     "phore/http-client": "dev-master"
   },
   "autoload": {
