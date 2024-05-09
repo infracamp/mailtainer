@@ -12,6 +12,7 @@ name: schedule-1.0
 on:
   workflow_dispatch:
 
+
   schedule:
     - cron: '15 15 * * *'  # on Wednesday at 6:22
 
