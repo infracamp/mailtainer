@@ -11,7 +11,7 @@
     "phore/cloudtool": "v1.0.0",
     "phore/hydrator": "v1.1.0",
     "phore/system": "*",
-    "phore/http-client": "dev-master"
+    "phore/http-client": "v1.0.9"
   },
   "autoload": {
     "psr-4": {
