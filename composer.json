@@ -10,9 +10,7 @@
     "php": ">=7.1",
     "phore/cloudtool": "^v1.0.1",
     "phore/hydrator": "^v1.1.0",
-    "phore/system": "*",
-    "phore/http-client": "^v1.0.9"
-  },
+    "phore/system": "*"},
   "autoload": {
     "psr-4": {
       "Infracamp\\Mailtainer\\": "src/"
