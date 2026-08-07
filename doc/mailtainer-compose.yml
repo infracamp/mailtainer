@@ -14,7 +14,8 @@ services:
         max_attempts: 2
     environment:
     - "MAILNAME=put.your.hostname.here"
-    - "ENABLE_LETSENCRYPT=0"
+    - "CONFIG_FILE=/data/path-to/mailtainer-cfg.yml"
+    - "ENABLE_LETSENCRYPT=1"
     - "ENABLE_DKIM=1"
     # Must match the DNS record: <selector>._domainkey.<domain>
     - "DKIM_SELECTOR=mail"
@@ -54,5 +55,5 @@ services:
 secrets:
   # Demo key for testing only. Replace with a Docker secret created from your own key in production.
   dkim_private_key:
-    file: ./dkim-demo.private
+    external: true
 
