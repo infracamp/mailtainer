@@ -31,12 +31,3 @@ foreach ($config->accounts as $account) {
         echo "{$alias}\t{$account->account}\n";
 }
 
-foreach ($config->httpForward as $forward) {
-    foreach ($forward->aliases as $alias) {
-        #echo "{$alias}\t{$forward->getAliasesName()}@localhost\n";
-    }
-}
-
-
-
-

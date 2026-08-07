@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b0e6c8e43501aee38635420228ff375",
+    "content-hash": "e3c2ee9f9f7825ff296d9180b19d5970",
     "packages": [
         {
             "name": "phore/cloudtool",
@@ -166,66 +166,6 @@
                 "source": "https://github.com/phore/phore-filesystem/tree/v1.1.0"
             },
             "time": "2024-02-09T00:37:40+00:00"
-        },
-        {
-            "name": "phore/http-client",
-            "version": "v1.0.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phore/phore-http-client.git",
-                "reference": "a1557dffb2767c8d893d7f4c59c54b9e5aab26ef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-http-client/zipball/a1557dffb2767c8d893d7f4c59c54b9e5aab26ef",
-                "reference": "a1557dffb2767c8d893d7f4c59c54b9e5aab26ef",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "phore/core": "*",
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "phore/cache": "*",
-                "phore/filesystem": "*",
-                "phore/objectstore": "*",
-                "phpunit/phpunit": "*"
-            },
-            "suggest": {
-                "phore/cache": "Use request caching"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/functions.php"
-                ],
-                "psr-4": {
-                    "Phore\\HttpClient\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matthias Leuffen",
-                    "email": "m@tth.es"
-                }
-            ],
-            "description": "Http client library for fast api access",
-            "homepage": "https://infracamp.org/phore/",
-            "keywords": [
-                "Keyword1",
-                "Keyword2"
-            ],
-            "support": {
-                "issues": "https://github.com/phore/phore-http-client/issues",
-                "source": "https://github.com/phore/phore-http-client/tree/v1.0.9"
-            },
-            "time": "2024-01-30T11:20:56+00:00"
         },
         {
             "name": "phore/hydrator",

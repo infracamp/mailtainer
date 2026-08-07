@@ -9,8 +9,14 @@ setup_dkim() {
     DKIM_PRIVATE_KEY_FILE="${DKIM_PRIVATE_KEY_FILE:-/run/secrets/dkim_private_key}"
     DKIM_KEY_FILE="/etc/opendkim/keys/${DKIM_SELECTOR}.private"
 
+    if [ ! -e "$DKIM_PRIVATE_KEY_FILE" ]; then
+        echo "[DKIM] Private key file does not exist: $DKIM_PRIVATE_KEY_FILE" >&2
+        echo "[DKIM] Please verify that the Docker secret is configured and mounted at this path." >&2
+        exit 1
+    fi
+
     if [ ! -r "$DKIM_PRIVATE_KEY_FILE" ]; then
-        echo "[DKIM] Private key not readable: $DKIM_PRIVATE_KEY_FILE" >&2
+        echo "[DKIM] Private key file is not readable: $DKIM_PRIVATE_KEY_FILE" >&2
         exit 1
     fi
 

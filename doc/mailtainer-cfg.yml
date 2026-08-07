@@ -8,10 +8,3 @@ accounts:
     # Password: test
     aliases:
       - "info2@leuffen.de"
-
-
-httpForward:
-  - targetUrl: "http://localhost/test.php"
-    basicAuth: "user:pass"
-    aliases:
-      - "fwd@leuffen.de"

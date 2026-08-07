@@ -12,7 +12,6 @@ Letsencrypt.
     - [Demo account-config.yml](doc/mailtainer-cfg.yml)
 - Out of the box support for Letsencrypt (SSL)
 - Setup & ready to go in 60 seconds
-- Forward mails to HTTP Push URL
 
 ## Deployment / Configuration
 

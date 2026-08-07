@@ -128,7 +128,6 @@ inet_interfaces = all
 # The path relative to $queue_directory, that is:
 #    /var/spool/postfix/private/dovecot-lmtp
 virtual_transport = lmtp:unix:private/dovecot-lmtp
-transport_maps = hash:/etc/postfix/transport
 
 # Check domains only, query users and aliases in Dovecot
 #
