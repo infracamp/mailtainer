@@ -17,6 +17,8 @@ services:
     - "CONFIG_FILE=/data/path-to/mailtainer-cfg.yml"
     - "ENABLE_LETSENCRYPT=1"
     - "ENABLE_DKIM=1"
+    # fail = abort startup on invalid SPF/DKIM/DMARC, ignore = log warnings and continue
+    - "VALIDATION_ERROR=fail"
     # Must match the DNS record: <selector>._domainkey.<domain>
     - "DKIM_SELECTOR=mail"
     - "DKIM_PRIVATE_KEY_FILE=/run/secrets/dkim_private_key"

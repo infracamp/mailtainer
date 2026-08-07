@@ -10,9 +10,30 @@ function fail(string $message): void
     fwrite(STDERR, "[DOMAIN-CONFIG] FAIL: $message\n");
 }
 
+function warn(string $message): void
+{
+    fwrite(STDERR, "[DOMAIN-CONFIG] WARN: $message\n");
+}
+
 function ok(string $message): void
 {
     echo "[DOMAIN-CONFIG] OK: $message\n";
+}
+
+function shouldIgnoreValidationErrors(): bool
+{
+    return defined("VALIDATION_ERROR") && strtolower((string) VALIDATION_ERROR) === "ignore";
+}
+
+function abortValidation(string $message): void
+{
+    if (shouldIgnoreValidationErrors()) {
+        warn($message);
+        exit(0);
+    }
+
+    fail($message);
+    exit(1);
 }
 
 function getTxtRecords(string $name): array
@@ -91,7 +112,7 @@ function validateDmarc(string $domain, array &$errors): void
     }
 
     if (count($dmarc) === 0) {
-        $errors[] = "$domain: missing DMARC TXT record at $name (example: 'v=DMARC1; p=none')";
+        $errors[] = "$domain: missing DMARC TXT record at $name (example: 'v=DMARC1; p=reject')";
         return;
     }
     if (count($dmarc) > 1) {
@@ -128,22 +149,20 @@ try {
         TConfig::class
     );
 } catch (Throwable $e) {
-    fail("Cannot read config file " . CONFIG_FILE . ": " . $e->getMessage());
-    exit(1);
+    abortValidation("Cannot read config file " . CONFIG_FILE . ": " . $e->getMessage());
 }
 
 if (! $config instanceof TConfig) {
-    fail("Invalid config file: " . CONFIG_FILE);
-    exit(1);
+    abortValidation("Invalid config file: " . CONFIG_FILE);
 }
 
 $domains = $config->getAllMailDomains();
 if (count($domains) === 0) {
-    fail("No mail domains found in config file: " . CONFIG_FILE);
-    exit(1);
+    abortValidation("No mail domains found in config file: " . CONFIG_FILE);
 }
 
 $errors = [];
+$ignoreValidationErrors = shouldIgnoreValidationErrors();
 $dkimPublicKey = null;
 if (defined("ENABLE_DKIM") && ENABLE_DKIM) {
     try {
@@ -165,7 +184,15 @@ foreach ($domains as $domain) {
 }
 
 if (count($errors) > 0) {
-    fwrite(STDERR, "\n[DOMAIN-CONFIG] Domain configuration validation failed. Fix DNS or disable the failing feature before starting the container.\n");
+    if ($ignoreValidationErrors) {
+        fwrite(STDERR, "\n[DOMAIN-CONFIG] Domain configuration validation reported warnings. Continuing because VALIDATION_ERROR=ignore.\n");
+        foreach ($errors as $error) {
+            warn($error);
+        }
+        exit(0);
+    }
+
+    fwrite(STDERR, "\n[DOMAIN-CONFIG] Domain configuration validation failed. Fix DNS or set VALIDATION_ERROR=ignore before starting the container.\n");
     foreach ($errors as $error) {
         fail($error);
     }

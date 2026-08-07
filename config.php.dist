@@ -33,3 +33,4 @@ define("CONFIG_FILE", "%CONFIG_FILE?/data/mailtainer-cfg.yml%");
 define("ENABLE_DKIM", (bool)"%ENABLE_DKIM?0%");
 define("DKIM_SELECTOR", "%DKIM_SELECTOR?mail%");
 define("DKIM_PRIVATE_KEY_FILE", "%DKIM_PRIVATE_KEY_FILE?/run/secrets/dkim_private_key%");
+define("VALIDATION_ERROR", "%VALIDATION_ERROR?fail%");

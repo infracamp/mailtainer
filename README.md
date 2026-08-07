@@ -48,6 +48,7 @@ mkpasswd -m SHA-512 <password>
 | `DKIM_SELECTOR`      | `mail` | DKIM selector used for `<selector>._domainkey.<domain>`       |
 | `DKIM_PRIVATE_KEY_FILE` | `/run/secrets/dkim_private_key` | Path to the Docker secret containing the DKIM private key |
 | `DEBUG`              | 0   | Set to 1 to enable debug logging (may contain sensitive data)    |
+| `VALIDATION_ERROR`   | `fail` | `fail` aborts startup on invalid SPF/DKIM/DMARC, `ignore` only logs warnings and continues |
 
 ### DKIM
 
@@ -92,6 +93,8 @@ _dmarc.<domain> TXT "v=DMARC1; p=reject"
 Use `p=none` while testing.
 
 On startup the container validates SPF, DKIM and DMARC DNS records for all domains in `mailtainer-cfg.yml`. If a required record is missing or the DKIM key does not match, startup aborts with a detailed error message.
+
+Set `VALIDATION_ERROR=ignore` to only print warnings and continue startup even if one or more domains are misconfigured.
 
 
 
