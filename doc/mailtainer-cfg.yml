@@ -1,17 +1,17 @@
 # Demo mail configuration.
 # With DKIM enabled the container validates SPF, DKIM and DMARC for all domains below.
-# Replace test.tld with your real domain and publish the DNS records before production use.
-postmaster: "test@test.tld"
+# Replace leuffen.de with your real domain and publish the DNS records before production use.
+postmaster: "test@leuffen.de"
 accounts:
-  - account: "test@test.tld"
+  - account: "test@leuffen.de"
     passwordHash: "{SHA512-CRYPT}$6$Y1hniTKTGpvDGZd$ZApoELumRFst7RQc23bN2ifF0PGbvInUi5tDjmgcGqQwnWoTEP7rW2Mb1kngaIkvAhtUD61QbTs7S/fbJj3PE."
     # Password: test
     aliases:
-      - "info2@test.tld"
+      - "info2@leuffen.de"
 
 
 httpForward:
   - targetUrl: "http://localhost/test.php"
     basicAuth: "user:pass"
     aliases:
-      - "fwd@test.tld"
+      - "fwd@leuffen.de"

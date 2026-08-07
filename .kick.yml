@@ -17,10 +17,11 @@ command:
     - "sudo phpdismod propro"
 
   init:
-    - "sudo -E scripts/startup.sh"
+
   dev:
 
   run:
+    - "sudo -E scripts/startup.sh"
     - "sudo -E vendor/bin/cloudtool --autoload /opt/src/bootstrap.php --tpldir /opt/etc --target /etc"
     - "sudo -E scripts/restart-services.sh"
 
