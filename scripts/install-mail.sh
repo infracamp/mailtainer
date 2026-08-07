@@ -18,7 +18,10 @@ DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -q -y \
 apt-get purge -q -y 'libapache2-mod-php*' || true
 /opt/scripts/harden-apache.sh
 
-useradd vmail
+getent group vmail >/dev/null 2>&1 || groupadd --system vmail
+id -u vmail >/dev/null 2>&1 || useradd --system --gid vmail --no-create-home --shell /usr/sbin/nologin vmail
+getent group opendkim >/dev/null 2>&1 || groupadd --system opendkim
+id -u opendkim >/dev/null 2>&1 || useradd --system --gid opendkim --no-create-home --shell /usr/sbin/nologin opendkim
 adduser clamav amavis
 
 sudo -i -u amavis razor-admin -create

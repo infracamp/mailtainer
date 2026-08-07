@@ -20,6 +20,14 @@ setup_dkim() {
         exit 1
     fi
 
+    if ! getent group opendkim >/dev/null 2>&1; then
+        groupadd --system opendkim
+    fi
+
+    if ! id -u opendkim >/dev/null 2>&1; then
+        useradd --system --gid opendkim --no-create-home --shell /usr/sbin/nologin opendkim
+    fi
+
     mkdir -p /etc/opendkim/keys /run/opendkim
     install -o opendkim -g opendkim -m 0600 "$DKIM_PRIVATE_KEY_FILE" "$DKIM_KEY_FILE"
 
