@@ -1,3 +1,6 @@
+# Demo mail configuration.
+# With DKIM enabled the container validates SPF, DKIM and DMARC for all domains below.
+# Replace test.tld with your real domain and publish the DNS records before production use.
 postmaster: "test@test.tld"
 accounts:
   - account: "test@test.tld"

@@ -1,0 +1,552 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "1b0e6c8e43501aee38635420228ff375",
+    "packages": [
+        {
+            "name": "phore/cloudtool",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phore/phore-cloudtool.git",
+                "reference": "24ebc308b07dab06c1db48ca5d8fc3862336cb1e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phore/phore-cloudtool/zipball/24ebc308b07dab06c1db48ca5d8fc3862336cb1e",
+                "reference": "24ebc308b07dab06c1db48ca5d8fc3862336cb1e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcre": "*",
+                "phore/filesystem": "^1.1.0",
+                "phore/log": "^1.1.1",
+                "phore/system": "^1.1.0",
+                "php": ">=7.2",
+                "text/template": "^2.8.5"
+            },
+            "bin": [
+                "bin/cloudtool"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phore\\CloudTool\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Leuffen",
+                    "email": "matthes@leuffen.de"
+                }
+            ],
+            "description": "Script to update config files using template",
+            "homepage": "http://infracamp.org/project/phore",
+            "keywords": [
+                "config",
+                "template",
+                "text"
+            ],
+            "support": {
+                "issues": "https://github.com/phore/phore-cloudtool/issues",
+                "source": "https://github.com/phore/phore-cloudtool/tree/v1.0.1"
+            },
+            "time": "2024-05-09T18:36:44+00:00"
+        },
+        {
+            "name": "phore/core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phore/phore-core.git",
+                "reference": "c4374be61568d45398e740e6ced6af31f99b7093"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phore/phore-core/zipball/c4374be61568d45398e740e6ced6af31f99b7093",
+                "reference": "c4374be61568d45398e740e6ced6af31f99b7093",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "ext-sodium": "*",
+                "ext-yaml": "*",
+                "phpunit/phpunit": "*"
+            },
+            "suggest": {
+                "ext-json": "Json encoding parsing",
+                "ext-sodium": "Encryption functions",
+                "ext-yaml": "Yaml encoding parsing"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions.inc.php"
+                ],
+                "psr-4": {
+                    "Phore\\Core\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Leuffen",
+                    "email": "m@tth.es"
+                }
+            ],
+            "description": "Phore core library",
+            "homepage": "https://infracamp.org/project/phore",
+            "support": {
+                "issues": "https://github.com/phore/phore-core/issues",
+                "source": "https://github.com/phore/phore-core/tree/master"
+            },
+            "time": "2026-06-11T10:00:38+00:00"
+        },
+        {
+            "name": "phore/filesystem",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phore/phore-filesystem.git",
+                "reference": "afa4c7df7931c23cb8447334bf42712a3e5143e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phore/phore-filesystem/zipball/afa4c7df7931c23cb8447334bf42712a3e5143e3",
+                "reference": "afa4c7df7931c23cb8447334bf42712a3e5143e3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-yaml": "*",
+                "phore/core": "*",
+                "php": ">8.1",
+                "psr/http-message": "^1.0@dev"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Phore\\FileSystem\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Leuffen",
+                    "email": "leuffen@continue.de"
+                }
+            ],
+            "description": "Acces files layer",
+            "homepage": "http://infracamp.org/project/phore",
+            "support": {
+                "issues": "https://github.com/phore/phore-filesystem/issues",
+                "source": "https://github.com/phore/phore-filesystem/tree/v1.1.0"
+            },
+            "time": "2024-02-09T00:37:40+00:00"
+        },
+        {
+            "name": "phore/http-client",
+            "version": "v1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phore/phore-http-client.git",
+                "reference": "a1557dffb2767c8d893d7f4c59c54b9e5aab26ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phore/phore-http-client/zipball/a1557dffb2767c8d893d7f4c59c54b9e5aab26ef",
+                "reference": "a1557dffb2767c8d893d7f4c59c54b9e5aab26ef",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "phore/core": "*",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phore/cache": "*",
+                "phore/filesystem": "*",
+                "phore/objectstore": "*",
+                "phpunit/phpunit": "*"
+            },
+            "suggest": {
+                "phore/cache": "Use request caching"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Phore\\HttpClient\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Leuffen",
+                    "email": "m@tth.es"
+                }
+            ],
+            "description": "Http client library for fast api access",
+            "homepage": "https://infracamp.org/phore/",
+            "keywords": [
+                "Keyword1",
+                "Keyword2"
+            ],
+            "support": {
+                "issues": "https://github.com/phore/phore-http-client/issues",
+                "source": "https://github.com/phore/phore-http-client/tree/v1.0.9"
+            },
+            "time": "2024-01-30T11:20:56+00:00"
+        },
+        {
+            "name": "phore/hydrator",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phore/phore-hydrator.git",
+                "reference": "0221f402082a8a874fe5c62f7f2c2ffa8d1565ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phore/phore-hydrator/zipball/0221f402082a8a874fe5c62f7f2c2ffa8d1565ff",
+                "reference": "0221f402082a8a874fe5c62f7f2c2ffa8d1565ff",
+                "shasum": ""
+            },
+            "require": {
+                "phore/core": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phore/tester": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Phore\\Hydrator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Leuffen",
+                    "email": "m@tth.es"
+                }
+            ],
+            "description": "Unserialize arrays into object structure",
+            "support": {
+                "issues": "https://github.com/phore/phore-hydrator/issues",
+                "source": "https://github.com/phore/phore-hydrator/tree/v1.2.0"
+            },
+            "time": "2025-01-10T11:45:44+00:00"
+        },
+        {
+            "name": "phore/log",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phore/phore-log.git",
+                "reference": "9bfde9d18d94c8fa0450bccc98801d24dc2cb83b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phore/phore-log/zipball/9bfde9d18d94c8fa0450bccc98801d24dc2cb83b",
+                "reference": "9bfde9d18d94c8fa0450bccc98801d24dc2cb83b",
+                "shasum": ""
+            },
+            "require": {
+                "phore/core": "*",
+                "php": ">=7.1",
+                "psr/log": "^1.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Phore\\Log\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Leuffen",
+                    "email": "m@tth.es"
+                }
+            ],
+            "description": "Logging class",
+            "homepage": "https://infracamp.org/project/phore",
+            "keywords": [
+                "logging",
+                "syslog"
+            ],
+            "support": {
+                "issues": "https://github.com/phore/phore-log/issues",
+                "source": "https://github.com/phore/phore-log/tree/v1.1.1"
+            },
+            "time": "2020-09-09T09:19:09+00:00"
+        },
+        {
+            "name": "phore/system",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phore/phore-system.git",
+                "reference": "66ba2f62c35a496901c658e51466145970f7afe9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phore/phore-system/zipball/66ba2f62c35a496901c658e51466145970f7afe9",
+                "reference": "66ba2f62c35a496901c658e51466145970f7afe9",
+                "shasum": ""
+            },
+            "require": {
+                "phore/core": "*",
+                "php": ">7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Phore\\System\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Leuffen",
+                    "email": "leuffen@continue.de"
+                }
+            ],
+            "description": "Execute shell commands",
+            "homepage": "https://infracamp.org/project/phore",
+            "support": {
+                "issues": "https://github.com/phore/phore-system/issues",
+                "source": "https://github.com/phore/phore-system/tree/v1.1.0"
+            },
+            "time": "2022-10-21T23:12:46+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/1.1"
+            },
+            "time": "2023-04-04T09:50:52+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
+            },
+            "time": "2021-05-03T11:20:27+00:00"
+        },
+        {
+            "name": "text/template",
+            "version": "v2.8.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dermatthes/text-template.git",
+                "reference": "f4753d63755b9d7ace119a99221d1cc3ae506b21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dermatthes/text-template/zipball/f4753d63755b9d7ace119a99221d1cc3ae506b21",
+                "reference": "f4753d63755b9d7ace119a99221d1cc3ae506b21",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcre": "*",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "nette/tester": "*",
+                "phpunit/phpcov": "^2.0",
+                "satooshi/php-coveralls": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Leuffen\\TextTemplate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Leuffen",
+                    "email": "matthes@leuffen.de"
+                }
+            ],
+            "description": "Simple and secure string-template-engine (Twig-like syntax) with nested if/elseif/else, loops, filters. Simple OOP api: Just one class doing the job (2-lines of code). Fast and secure: No code-generation, no eval'ed() code. Extensible by callbacks. Fully tested. Rich examples included.",
+            "homepage": "http://text-template.pub.leuffen.de",
+            "keywords": [
+                "filter",
+                "for",
+                "if",
+                "loop",
+                "mail",
+                "render",
+                "smarty",
+                "template",
+                "text",
+                "twig"
+            ],
+            "support": {
+                "issues": "https://github.com/dermatthes/text-template/issues",
+                "source": "https://github.com/dermatthes/text-template/tree/v2.8.5"
+            },
+            "time": "2023-06-26T17:11:41+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.1"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}

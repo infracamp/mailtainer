@@ -12,7 +12,6 @@ Letsencrypt.
     - [Demo account-config.yml](doc/mailtainer-cfg.yml)
 - Out of the box support for Letsencrypt (SSL)
 - Setup & ready to go in 60 seconds
-- Build in backup utility using GPG encryption
 - Forward mails to HTTP Push URL
 
 ## Deployment / Configuration
@@ -46,7 +45,55 @@ mkpasswd -m SHA-512 <password>
 | `CONFIG_FILE`    | `/data/mailtainer-cfg.yml` | The path to the config file inside the container  |
 | `RBL_CLIENT`     | `sbl-xbl.spamhaus.org;dnsbl.sorbs.net` | RBL hosts |
 | `ENABLE_LETSENCRYPT` | 1   | Enable automatic acquiring / renewing of SSL certificates        |
+| `ENABLE_DKIM`        | 0   | Enable DKIM signing using OpenDKIM                               |
+| `DKIM_SELECTOR`      | `mail` | DKIM selector used for `<selector>._domainkey.<domain>`       |
+| `DKIM_PRIVATE_KEY_FILE` | `/run/secrets/dkim_private_key` | Path to the Docker secret containing the DKIM private key |
 | `DEBUG`              | 0   | Set to 1 to enable debug logging (may contain sensitive data)    |
+
+### DKIM
+
+Enable DKIM signing with one Docker secret containing only the private key:
+
+```bash
+opendkim-genkey -b 2048 -s mail -d example.org
+docker secret create dkim_private_key mail.private
+```
+
+Add the secret and environment variables to the service:
+
+```yaml
+services:
+  mailtainer:
+    environment:
+      - "ENABLE_DKIM=1"
+      # Must match the DNS record: <selector>._domainkey.<domain>
+      - "DKIM_SELECTOR=mail"
+      - "DKIM_PRIVATE_KEY_FILE=/run/secrets/dkim_private_key"
+    secrets:
+      - dkim_private_key
+
+secrets:
+  dkim_private_key:
+    external: true
+```
+
+The public key is regenerated from the private key on every container start and printed to the log. Add the printed TXT record for every outgoing sender domain:
+
+```text
+mail._domainkey.<domain> TXT "v=DKIM1; k=rsa; p=..."
+```
+
+Also add SPF and DMARC records for every mail domain, for example:
+
+```text
+<domain>        TXT "v=spf1 mx -all"
+_dmarc.<domain> TXT "v=DMARC1; p=reject"
+```
+
+Use `p=none` while testing.
+
+On startup the container validates SPF, DKIM and DMARC DNS records for all domains in `mailtainer-cfg.yml`. If a required record is missing or the DKIM key does not match, startup aborts with a detailed error message.
+
 
 
 ## Mail-Client Settings
@@ -69,48 +116,8 @@ Docker Images are availabe on [Github-Packages](https://github.com/infracamp/mai
 | `ghcr.io/infracamp/mailtainer:1.0.x`    | Release build. Fixed version (no updates)  |
 | `ghcr.io/infracamp/mailtainer:unstable` | Development build. Testing only            |
 
-## Backup & Recovery
-
-Mailtainer comes with an http backup utility. It encrypts the
-data directory with pgp. To enable backups, fist create a pgp keypair
-
-
-### Create a pgp key pair
-
-```
-gpg --gen-key
-gpg --output /mailtainer_data/public.pgp --armor --export your_email@domain.tld
-gpg --export-secret-keys --armor --output private-key-bku-leuffen.pgp bku@leuffen.de
-```
-
-| Environment                       | Default               | Description    |
-|-----------------------------------|-----------------------|--------------------|
-| `BACKUP_PGP_PUBLIC_KEY_FILE`      | `/data/public.pgp`    | Specify the full path to public.pgp inside the container | 
-| `BACKUP_AUTH_PASS_HASH`           | (required)            | specify the crypted (`mkpasswd -m SHA-512`) password to use for basic auth |
-
 > To pass environment including "$"-character you have to double it (replace "$" to "$$")! 
 > (See [variable substituion](https://docs.docker.com/compose/compose-file/#variable-substitution) for more information)
-
-### Download the backup via curl
-
-```
-curl -fo /backup/location/backup.enc -u backup:<plain_auth_pass> http://mail.server.tld/export.php
-```
-
-[Example backup script](doc/backup-script.sh)
-
-### Restore from backup
-
-Import the private key
-```
-gpg --import backupkeys.pgp
-```
-
-Extract the data
-
-```
-gpg -d backup-file.enc | tar -xz
-```
 
 ## Block IP Addresses using iptables
 

@@ -19,6 +19,6 @@ class TAccount
     /**
      * @var string[]
      */
-    public $aliases;
+    public $aliases = [];
 
 }

@@ -15,6 +15,12 @@ services:
     environment:
     - "MAILNAME=put.your.hostname.here"
     - "ENABLE_LETSENCRYPT=0"
+    - "ENABLE_DKIM=1"
+    # Must match the DNS record: <selector>._domainkey.<domain>
+    - "DKIM_SELECTOR=mail"
+    - "DKIM_PRIVATE_KEY_FILE=/run/secrets/dkim_private_key"
+    secrets:
+    - dkim_private_key
     volumes:
     - type: bind
       source: /mailtainer_data
@@ -44,4 +50,9 @@ services:
       published: 143
       protocol: tcp
       mode: host
+
+secrets:
+  # Demo key for testing only. Replace with a Docker secret created from your own key in production.
+  dkim_private_key:
+    file: ./dkim-demo.private
 

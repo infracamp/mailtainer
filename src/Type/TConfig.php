@@ -26,6 +26,9 @@ class TConfig
     {
         $allDomains = [];
         foreach ($this->accounts as $account) {
+            [$name, $domain] = explode("@", $account->account);
+            $allDomains[strtolower(trim($domain))] = true;
+
             foreach ($account->aliases as $alias) {
                 [$name, $domain] = explode("@", $alias);
                 $allDomains[strtolower(trim($domain))] = true;
