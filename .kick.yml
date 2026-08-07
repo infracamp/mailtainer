@@ -3,8 +3,6 @@ from: "ghcr.io/nfra-project/kickstart-flavor-php:unstable"
 ports: "80:80/tcp;25:25/tcp;143:143/tcp;465:465/tcp;993:993/tcp"
 secrets: open_ai
 
-packages: [ php8.5-zip]
-
 config_file:
   template: "config.php.dist"
   target: "config.php"
