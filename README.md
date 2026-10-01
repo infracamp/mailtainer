@@ -4,6 +4,7 @@ A mailserver image build on Dovecot, Postfix, Amavis, ClamAV, Spamassassin,
 Letsencrypt. 
 
 
+
 ## TL;DR;
 
 - Public available image - runs on docker or kubernetes
