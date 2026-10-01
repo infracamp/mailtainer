@@ -4,29 +4,33 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3c2ee9f9f7825ff296d9180b19d5970",
+    "content-hash": "9664c9fcc27e2b42d04a462aec97c617",
     "packages": [
         {
             "name": "phore/cloudtool",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-cloudtool.git",
-                "reference": "24ebc308b07dab06c1db48ca5d8fc3862336cb1e"
+                "reference": "5ea146427d78b92dc5e988a8547c100110749a42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-cloudtool/zipball/24ebc308b07dab06c1db48ca5d8fc3862336cb1e",
-                "reference": "24ebc308b07dab06c1db48ca5d8fc3862336cb1e",
+                "url": "https://api.github.com/repos/phore/phore-cloudtool/zipball/5ea146427d78b92dc5e988a8547c100110749a42",
+                "reference": "5ea146427d78b92dc5e988a8547c100110749a42",
                 "shasum": ""
             },
             "require": {
                 "ext-pcre": "*",
-                "phore/filesystem": "^1.1.0",
+                "phore/core": "1.0.3",
+                "phore/filesystem": "^1.0.3",
                 "phore/log": "^1.1.1",
                 "phore/system": "^1.1.0",
                 "php": ">=7.2",
                 "text/template": "^2.8.5"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "^7.6 || ^8.3"
             },
             "bin": [
                 "bin/cloudtool"
@@ -56,22 +60,22 @@
             ],
             "support": {
                 "issues": "https://github.com/phore/phore-cloudtool/issues",
-                "source": "https://github.com/phore/phore-cloudtool/tree/v1.0.1"
+                "source": "https://github.com/phore/phore-cloudtool/tree/v1.0.2"
             },
-            "time": "2024-05-09T18:36:44+00:00"
+            "time": "2026-10-01T07:50:18+00:00"
         },
         {
             "name": "phore/core",
-            "version": "dev-master",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-core.git",
-                "reference": "c4374be61568d45398e740e6ced6af31f99b7093"
+                "reference": "c77383525a84da51ea32d9a7696db8b6e6e8c157"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-core/zipball/c4374be61568d45398e740e6ced6af31f99b7093",
-                "reference": "c4374be61568d45398e740e6ced6af31f99b7093",
+                "url": "https://api.github.com/repos/phore/phore-core/zipball/c77383525a84da51ea32d9a7696db8b6e6e8c157",
+                "reference": "c77383525a84da51ea32d9a7696db8b6e6e8c157",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +92,6 @@
                 "ext-sodium": "Encryption functions",
                 "ext-yaml": "Yaml encoding parsing"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -114,20 +117,20 @@
                 "issues": "https://github.com/phore/phore-core/issues",
                 "source": "https://github.com/phore/phore-core/tree/master"
             },
-            "time": "2026-06-11T10:00:38+00:00"
+            "time": "2020-09-02T13:22:32+00:00"
         },
         {
             "name": "phore/filesystem",
-            "version": "v1.1.0",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-filesystem.git",
-                "reference": "afa4c7df7931c23cb8447334bf42712a3e5143e3"
+                "reference": "06d16003058d07ffd5f0c872c211f92a3f02c3e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-filesystem/zipball/afa4c7df7931c23cb8447334bf42712a3e5143e3",
-                "reference": "afa4c7df7931c23cb8447334bf42712a3e5143e3",
+                "url": "https://api.github.com/repos/phore/phore-filesystem/zipball/06d16003058d07ffd5f0c872c211f92a3f02c3e2",
+                "reference": "06d16003058d07ffd5f0c872c211f92a3f02c3e2",
                 "shasum": ""
             },
             "require": {
@@ -163,9 +166,9 @@
             "homepage": "http://infracamp.org/project/phore",
             "support": {
                 "issues": "https://github.com/phore/phore-filesystem/issues",
-                "source": "https://github.com/phore/phore-filesystem/tree/v1.1.0"
+                "source": "https://github.com/phore/phore-filesystem/tree/v1.1.1"
             },
-            "time": "2024-02-09T00:37:40+00:00"
+            "time": "2026-09-11T12:53:10+00:00"
         },
         {
             "name": "phore/hydrator",
@@ -482,10 +485,10 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {},
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1"
+        "php": ">=8.0"
     },
     "platform-dev": {},
     "plugin-api-version": "2.9.0"
