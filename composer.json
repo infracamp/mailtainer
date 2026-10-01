@@ -10,7 +10,8 @@
     "php": ">=7.1",
     "phore/cloudtool": "^v1.0.1",
     "phore/hydrator": "^v1.1.0",
-    "phore/system": "*"},
+    "phore/system": "*",
+    "phore/log": "v2.0.3 as 1.1.2"},
   "autoload": {
     "psr-4": {
       "Infracamp\\Mailtainer\\": "src/"
@@ -19,4 +20,3 @@
   
   "minimum-stability": "dev"
 }
-

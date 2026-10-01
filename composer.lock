@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3c2ee9f9f7825ff296d9180b19d5970",
+    "content-hash": "7797906037bd2434a6a327b2210f9fe3",
     "packages": [
         {
             "name": "phore/cloudtool",
@@ -216,25 +216,25 @@
         },
         {
             "name": "phore/log",
-            "version": "v1.1.1",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-log.git",
-                "reference": "9bfde9d18d94c8fa0450bccc98801d24dc2cb83b"
+                "reference": "7fe31c2b97bf13c70fe463b21afab93b4e1e91a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-log/zipball/9bfde9d18d94c8fa0450bccc98801d24dc2cb83b",
-                "reference": "9bfde9d18d94c8fa0450bccc98801d24dc2cb83b",
+                "url": "https://api.github.com/repos/phore/phore-log/zipball/7fe31c2b97bf13c70fe463b21afab93b4e1e91a2",
+                "reference": "7fe31c2b97bf13c70fe463b21afab93b4e1e91a2",
                 "shasum": ""
             },
             "require": {
                 "phore/core": "*",
-                "php": ">=7.1",
-                "psr/log": "^1.1"
+                "php": ">=8.5",
+                "psr/log": "^1.1.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "*"
+                "phpspec/phpspec": "^8.3"
             },
             "type": "library",
             "autoload": {
@@ -263,9 +263,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phore/phore-log/issues",
-                "source": "https://github.com/phore/phore-log/tree/v1.1.1"
+                "source": "https://github.com/phore/phore-log/tree/v2.0.3"
             },
-            "time": "2020-09-09T09:19:09+00:00"
+            "time": "2026-10-01T07:23:18+00:00"
         },
         {
             "name": "phore/system",
@@ -479,7 +479,14 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "phore/log",
+            "version": "2.0.3.0",
+            "alias": "1.1.2",
+            "alias_normalized": "1.1.2.0"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {},
     "prefer-stable": false,
